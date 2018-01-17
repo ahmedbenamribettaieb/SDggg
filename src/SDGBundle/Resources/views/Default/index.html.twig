@@ -2,18 +2,221 @@
 <html dir="ltr" lang="en-US">
 
 <!-- Mirrored from themes.semicolonweb.com/html/canvas/index.php?page-loader=5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Jan 2018 15:06:31 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
 <head>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
-    <meta name="author" content="SemiColonWeb" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+            function r(n) {
+                if (!t[n]) {
+                    var o = t[n] = {exports: {}};
+                    e[n][0].call(o.exports, function (t) {
+                        var o = e[n][1][t];
+                        return r(o || t)
+                    }, o, o.exports)
+                }
+                return t[n].exports
+            }
+
+            if ("function" == typeof __nr_require)return __nr_require;
+            for (var o = 0; o < n.length; o++)r(n[o]);
+            return r
+        }({
+            1: [function (e, t, n) {
+                function r() {
+                }
+
+                function o(e, t, n) {
+                    return function () {
+                        return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
+                    }
+                }
+
+                var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = e("loader"), s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-", l = d + "ixn-";
+                a(p, function (e, t) {
+                    s[t] = o(d + t, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function (e, t) {
+                        var n = {}, r = this, o = "function" == typeof t;
+                        return i(l + "tracer", [f.now(), e, n], r), function () {
+                            if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o)try {
+                                return t.apply(this, arguments)
+                            } catch (e) {
+                                throw c.emit("fn-err", [arguments, this, e], n), e
+                            } finally {
+                                c.emit("fn-end", [f.now()], n)
+                            }
+                        }
+                    }
+                };
+                a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
+                    m[t] = o(l + t)
+                }), newrelic.noticeError = function (e) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
+                }
+            }, {}], 2: [function (e, t, n) {
+                function r(e, t) {
+                    var n = [], r = "", i = 0;
+                    for (r in e)o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+                    return n
+                }
+
+                var o = Object.prototype.hasOwnProperty;
+                t.exports = r
+            }, {}], 3: [function (e, t, n) {
+                function r(e, t, n) {
+                    t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+                    for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;)i[r] = e[t + r];
+                    return i
+                }
+
+                t.exports = r
+            }, {}], 4: [function (e, t, n) {
+                t.exports = {exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart}
+            }, {}], ee: [function (e, t, n) {
+                function r() {
+                }
+
+                function o(e) {
+                    function t(e) {
+                        return e && e instanceof r ? e : e ? c(e, u, i) : i()
+                    }
+
+                    function n(n, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(n, r, o);
+                            for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++)u[f].apply(a, r);
+                            var p = s[y[n]];
+                            return p && p.push([b, n, r, a]), a
+                        }
+                    }
+
+                    function l(e, t) {
+                        v[e] = m(e).concat(t)
+                    }
+
+                    function m(e) {
+                        return v[e] || []
+                    }
+
+                    function w(e) {
+                        return p[e] = p[e] || o(n)
+                    }
+
+                    function g(e, t) {
+                        f(e, function (e, n) {
+                            t = t || "feature", y[n] = t, t in s || (s[t] = [])
+                        })
+                    }
+
+                    var v = {}, y = {},
+                        b = {on: l, emit: n, get: w, listeners: m, context: t, buffer: g, abort: a, aborted: !1};
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+
+                var u = "nr@context", c = e("gos"), f = e(2), s = {}, p = {}, d = t.exports = o();
+                d.backlog = s
+            }, {}], gos: [function (e, t, n) {
+                function r(e, t, n) {
+                    if (o.call(e, t))return e[t];
+                    var r = n();
+                    if (Object.defineProperty && Object.keys)try {
+                        return Object.defineProperty(e, t, {value: r, writable: !0, enumerable: !1}), r
+                    } catch (i) {
+                    }
+                    return e[t] = r, r
+                }
+
+                var o = Object.prototype.hasOwnProperty;
+                t.exports = r
+            }, {}], handle: [function (e, t, n) {
+                function r(e, t, n, r) {
+                    o.buffer([e], r), o.emit(e, t, n)
+                }
+
+                var o = e("ee").get("handle");
+                t.exports = r, r.ee = o
+            }, {}], id: [function (e, t, n) {
+                function r(e) {
+                    var t = typeof e;
+                    return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
+                        return o++
+                    })
+                }
+
+                var o = 1, i = "nr@id", a = e("gos");
+                t.exports = r
+            }, {}], loader: [function (e, t, n) {
+                function r() {
+                    if (!x++) {
+                        var e = h.info = NREUM.info, t = d.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t))return s.abort();
+                        f(y, function (t, n) {
+                            e[t] || (e[t] = n)
+                        }), c("mark", ["onload", a() + h.offset], null, "api");
+                        var n = d.createElement("script");
+                        n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
+                    }
+                }
+
+                function o() {
+                    "complete" === d.readyState && i()
+                }
+
+                function i() {
+                    c("mark", ["domContent", a() + h.offset], null, "api")
+                }
+
+                function a() {
+                    return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset
+                }
+
+                var u = (new Date).getTime(), c = e("handle"), f = e(2), s = e("ee"), p = window, d = p.document,
+                    l = "addEventListener", m = "attachEvent", w = p.XMLHttpRequest, g = w && w.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: p.setImmediate,
+                    CT: clearTimeout,
+                    XHR: w,
+                    REQ: p.Request,
+                    EV: p.Event,
+                    PR: p.Promise,
+                    MO: p.MutationObserver
+                };
+                var v = "" + location, y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1071.min.js"
+                    }, b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+                    h = t.exports = {offset: u, now: a, origin: v, features: {}, xhrWrappable: b};
+                e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
+                var x = 0, E = e(4)
+            }, {}]
+        }, {}, ["loader"]);</script>
+    <meta name="author" content="SemiColonWeb"/>
 
     <!-- Stylesheets
     ============================================= -->
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('main.css')}}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/swiper.css')}}" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
+          rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('main.css') }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ asset('css/swiper.css') }}" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!--[if lt IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
@@ -30,358 +233,725 @@
 <!-- Document Wrapper
 ============================================= -->
 <div id="wrapper" class="clearfix">
-<!-- Header
-		============================================= -->
-<header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
-
-    <div id="header-wrap">
-
-        <div class="container clearfix">
-
-            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-            <!-- Logo
+    <!-- Header
             ============================================= -->
-            <div id="logo">
-                <a href="index.html" class="standard-logo" data-dark-logo="{{ asset('images/logo-dark.png')}}"><img src="{{ asset('images/logo.png')}}" alt="Canvas Logo"></a>
-                <a href="index.html" class="retina-logo" data-dark-logo="{{ asset('images/logo-dark@2x.png')}}"><img src="{{ asset('images/logo%402x.png')}}" alt="Canvas Logo"></a>
-            </div><!-- #logo end -->
+    <header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
 
-            <!-- Primary Navigation
-            ============================================= -->
-            <nav id="primary-menu" class="dark">
+        <div id="header-wrap">
 
-                <ul>
-                    <li class="current"><a href="index.html"><div>Home</div></a>
-                        <ul>
-                            <li><a href="index-corporate.html"><div>Home - Corporate</div></a>
-                                <ul>
-                                    <li><a href="index-corporate.html"><div>Corporate - Layout 1</div></a></li>
-                                    <li><a href="index-corporate-2.html"><div>Corporate - Layout 2</div></a></li>
-                                    <li><a href="index-corporate-3.html"><div>Corporate - Layout 3</div></a></li>
-                                    <li><a href="index-corporate-4.html"><div>Corporate - Layout 4</div></a></li>
-                                </ul>
-                            </li>
+            <div class="container clearfix">
 
-                        </ul>
-                    </li>
-                    <li><a href="#"><div>Features</div></a>
-                        <ul>
+                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
-                            <li><a href="#"><div><i class="icon-umbrella"></i>Headers</div></a>
-                                <ul>
-                                    <li><a href="header-light.html"><div>Light Version</div></a></li>
-                                    <li><a href="header-dark.html"><div>Dark Version</div></a></li>
-                                    <li><a href="header-transparent.html"><div>Transparent</div></a></li>
-                                    <li><a href="header-semi-transparent.html"><div>Semi Transparent</div></a>
-                                        <ul>
-                                            <li><a href="header-semi-transparent.html"><div>Light Version</div></a></li>
-                                            <li><a href="header-semi-transparent-dark.html"><div>Dark Version</div></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="header-side-left.html"><div>Left Side Header</div></a>
-                                        <ul>
-                                            <li><a href="header-side-left.html"><div>Fixed Position</div></a></li>
-                                            <li><a href="header-side-left-open.html"><div>OnClick Open</div></a></li>
-                                            <li><a href="header-side-left-open-push.html"><div>Push Content</div></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="header-side-right.html"><div>Right Side Header</div></a>
-                                        <ul>
-                                            <li><a href="header-side-right.html"><div>Fixed Position</div></a></li>
-                                            <li><a href="header-side-right-open.html"><div>OnClick Open</div></a></li>
-                                            <li><a href="header-side-right-open-push.html"><div>Push Content</div></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="header-floating.html"><div>Floating Version</div></a></li>
-                                    <li><a href="static-sticky.html"><div>Static Sticky</div></a></li>
-                                    <li><a href="responsive-sticky.html"><div>Responsive Sticky</div></a></li>
-                                    <li><a href="logo-changer.html"><div>Alternate Logos</div></a></li>
-                                    <li><a href="alternate-mobile-menu.html"><div>Alternate Mobile Menu</div></a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="mega-menu"><a href="#"><div>Pages</div></a>
-                        <div class="mega-menu-content style-2 clearfix">
-                            <ul class="mega-menu-column col-md-3">
-                                <li class="mega-menu-title"><a href="#"><div>Introduction</div></a>
-                                    <ul>
-                                        <li><a href="about.html"><div>About Us</div></a></li>
-                                        <li><a href="about-2.html"><div>About Us - Layout 2</div></a></li>
-                                        <li><a href="about-me.html"><div>About Me</div></a></li>
-                                        <li><a href="team.html"><div>Team Members</div></a></li>
-                                        <li><a href="jobs.html"><div>Careers</div></a></li>
-                                        <li><a href="side-navigation.html"><div>Side Navigation</div></a></li>
-                                        <li><a href="page-submenu.html"><div>Page Submenu</div></a></li>
-                                        <li><a href="sitemap.html"><div>Sitemap</div></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </li>
-                    <li class="mega-menu"><a href="#"><div>Portfolio</div></a>
-                        <div class="mega-menu-content style-2 clearfix">
-
-                            <ul class="mega-menu-column col-5">
-                                <li class="mega-menu-title"><a href="#"><div>Single Project</div></a>
-                                    <ul>
-                                        <li><a href="portfolio-single-extended.html"><div>Extended Item</div></a></li>
-                                        <li><a href="portfolio-single-fullwidth.html"><div>Parallax Image</div></a></li>
-                                        <li><a href="portfolio-single-gallery-full.html"><div>Slider Gallery</div></a></li>
-                                        <li><a href="portfolio-single-video-fullwidth-left-sidebar.html"><div>HTML5 Video</div></a></li>
-                                        <li><a href="portfolio-single-thumbs-right-sidebar.html"><div>Masonry Thumbs</div></a></li>
-                                        <li><a href="portfolio-single-video-both-sidebar.html"><div>Embed Video</div></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="mega-menu-column col-5">
-                                <li class="mega-menu-title"><a href="#"><div>Layouts</div></a>
-                                    <ul>
-                                        <li><a href="portfolio-nomargin.html"><div>Default</div></a></li>
-                                        <li><a href="portfolio-1-alt-right-sidebar.html"><div>Right Sidebar</div></a></li>
-                                        <li><a href="portfolio-3-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                        <li><a href="portfolio-2-both-sidebar.html"><div>Both Sidebar</div></a></li>
-                                        <li><a href="portfolio-fullwidth-notitle.html"><div>100% Width</div></a></li>
-                                        <li><a href="portfolio-parallax.html"><div>Parallax</div></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="mega-menu"><a href="#"><div>Blog</div></a>
-                        <div class="mega-menu-content style-2 clearfix">
-                            <ul class="mega-menu-column col-md-3">
-                                <li class="mega-menu-title"><a href="#"><div>Default</div></a>
-                                    <ul>
-                                        <li><a href="blog.html"><div>Right Sidebar</div></a></li>
-                                        <li><a href="blog-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                        <li><a href="blog-both-sidebar.html"><div>Both Sidebar</div></a></li>
-                                        <li><a href="blog-full-width.html"><div>Full Width</div></a></li>
-                                    </ul>
-                                </li>
-                                <li class="mega-menu-title"><a href="#"><div>Timeline</div></a>
-                                    <ul>
-                                        <li><a href="blog-timeline-right-sidebar.html"><div>Right Sidebar</div></a></li>
-                                        <li><a href="blog-timeline-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                        <li><a href="blog-timeline.html"><div>Full Width</div></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="mega-menu-column col-md-3">
-                                <li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
-                                    <ul>
-                                        <li><a href="blog-masonry.html"><div>4 Columns</div></a></li>
-                                        <li><a href="blog-masonry-3.html"><div>3 Columns</div></a></li>
-                                        <li><a href="blog-masonry-2.html"><div>2 Columns</div></a></li>
-                                        <li><a href="blog-masonry-full.html"><div>100% Width</div></a></li>
-                                    </ul>
-                                </li>
-                                <li class="mega-menu-title"><a href="#"><div>Grid</div></a>
-                                    <ul>
-                                        <li><a href="blog-grid.html"><div>4 Columns</div></a></li>
-                                        <li><a href="blog-grid-3.html"><div>3 Columns</div></a></li>
-                                        <li><a href="blog-grid-2.html"><div>2 Columns</div></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="mega-menu-column col-md-3">
-                                <li class="mega-menu-title"><a href="#"><div>Small Thumbs</div></a>
-                                    <ul>
-                                        <li><a href="blog-small-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                        <li><a href="blog-small.html"><div>Right Sidebar</div></a></li>
-                                        <li><a href="blog-small-both-sidebar.html"><div>Both Sidebar</div></a></li>
-                                        <li><a href="blog-small-full-width.html"><div>Full Width</div></a></li>
-                                        <li><a href="blog-small-alt.html"><div>Alternate Layout</div></a></li>
-                                    </ul>
-                                </li>
-                                <li class="mega-menu-title"><a href="#"><div>Item Splitting</div></a>
-                                    <ul>
-                                        <li><a href="blog-grid.html"><div>Pagination</div></a></li>
-                                        <li><a href="blog-masonry.html"><div>Infinite Scroll</div></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="mega-menu-column col-md-3">
-                                <li class="mega-menu-title"><a href="#"><div>Single</div></a>
-                                    <ul>
-                                        <li><a href="blog-single.html"><div>Default Layout</div></a></li>
-                                        <li><a href="blog-single-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                        <li><a href="blog-single-full.html"><div>Full Width</div></a></li>
-                                        <li><a href="blog-single-small.html"><div>Small Image</div></a></li>
-                                        <li><a href="blog-single-split-right-sidebar.html"><div>Split Layout</div></a></li>
-                                    </ul>
-                                </li>
-                                <li class="mega-menu-title"><a href="#"><div>Comments Module</div></a>
-                                    <ul>
-                                        <li><a href="blog-single-left-sidebar.html#comments"><div>Facebook Comments</div></a></li>
-                                        <li><a href="blog-single-small.html#comments"><div>Disqus Comments</div></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="shop.html"><div>Shop</div></a>
-                        <ul>
-                            <li><a href="shop.html"><div>4 Columns</div></a></li>
-                            <li><a href="shop-3.html"><div>3 Columns</div></a>
-                                <ul>
-                                    <li><a href="shop-3.html"><div>Full Width</div></a></li>
-                                    <li><a href="shop-3-right-sidebar.html"><div>Right Sidebar</div></a></li>
-                                    <li><a href="shop-3-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="404.html"><div>2 Columns</div></a>
-                                <ul>
-                                    <li><a href="shop-2-right-sidebar.html"><div>Right Sidebar</div></a></li>
-                                    <li><a href="shop-2-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                    <li><a href="shop-2-both-sidebar.html"><div>Both Sidebar</div></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop-1.html"><div>1 Columns</div></a>
-                                <ul>
-                                    <li><a href="shop-1.html"><div>Full Width</div></a></li>
-                                    <li><a href="shop-1-right-sidebar.html"><div>Right Sidebar</div></a></li>
-                                    <li><a href="shop-1-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                    <li><a href="shop-1-both-sidebar.html"><div>Both Sidebar</div></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop-category-parallax.html"><div>Categories - Parallax</div></a></li>
-                            <li><a href="shop-combination-filter.html"><div>Combination Filter</div></a></li>
-                            <li><a href="shop-single.html"><div>Single Product</div></a>
-                                <ul>
-                                    <li><a href="shop-single.html"><div>Full Width</div></a></li>
-                                    <li><a href="shop-single-right-sidebar.html"><div>Right Sidebar</div></a></li>
-                                    <li><a href="shop-single-left-sidebar.html"><div>Left Sidebar</div></a></li>
-                                    <li><a href="shop-single-both-sidebar.html"><div>Both Sidebar</div></a></li>
-                                </ul>
-                            </li>
-                            <li><a href="cart.html"><div>Cart</div></a></li>
-                            <li><a href="checkout.html"><div>Checkout</div></a></li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
-                        <div class="mega-menu-content clearfix">
-                            <ul class="mega-menu-column col-5">
-                                <li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
-                                <li><a href="buttons.html"><div><i class="icon-link"></i>Buttons</div></a></li>
-                                <li><a href="carousel.html"><div><i class="icon-heart3"></i>Carousel</div></a></li>
-                                <li><a href="charts.html"><div><i class="icon-bar-chart"></i>Charts</div></a></li>
-                                <li><a href="clients.html"><div><i class="icon-apple"></i>Clients</div></a></li>
-                                <li><a href="columns-grids.html"><div><i class="icon-th-large"></i>Columns</div></a></li>
-                                <li><a href="counters.html"><div><i class="icon-time"></i>Counters</div></a></li>
-                                <li><a href="component-datatable.html"><div><i class="icon-table"></i>Data Tables</div></a></li>
-                                <li><a href="component-datepicker.html"><div><i class="icon-calendar3"></i>Date &amp; Time Pickers</div></a></li>
-                            </ul>
-                            <ul class="mega-menu-column col-5">
-                                <li><a href="dividers.html"><div><i class="icon-indent-right"></i>Dividers</div></a></li>
-                                <li><a href="featured-boxes.html"><div><i class="icon-lightbulb"></i>Icon Boxes</div></a></li>
-                                <li><a href="gallery.html"><div><i class="icon-picture"></i>Galleries</div></a></li>
-                                <li><a href="headings-dropcaps.html"><div><i class="icon-pencil2"></i>Heading Styles</div></a></li>
-                                <li><a href="icon-lists.html"><div><i class="icon-list-alt"></i>Icon Lists</div></a></li>
-                                <li><a href="labels-badges.html"><div><i class="icon-plus-sign"></i>Labels</div></a></li>
-                                <li><a href="lightbox.html"><div><i class="icon-resize-full"></i>Lightbox</div></a></li>
-                                <li><a href="component-editable.html"><div><i class="icon-edit"></i>Editable Fields</div></a></li>
-                                <li><a href="component-uploads.html"><div><i class="icon-line-upload"></i>File Uploads</div></a></li>
-                            </ul>
-                            <ul class="mega-menu-column col-5">
-                                <li><a href="lists-panels.html"><div><i class="icon-th-list"></i>Lists &amp; Panels</div></a></li>
-                                <li><a href="maps.html"><div><i class="icon-map-marker2"></i>Maps</div></a></li>
-                                <li><a href="media-embeds.html"><div><i class="icon-play"></i>Media Embeds</div></a></li>
-                                <li><a href="modal-popovers.html"><div><i class="icon-move"></i>Modal Boxes</div></a></li>
-                                <li><a href="navigation.html"><div><i class="icon-align-justify2"></i>Navigations</div></a></li>
-                                <li><a href="pagination-progress.html"><div><i class="icon-cogs"></i>Pagination</div></a></li>
-                                <li><a href="pie-skills.html"><div><i class="icon-tasks"></i>Pies &amp; Skills</div></a></li>
-                                <li><a href="component-range-slider.html"><div><i class="icon-line-move"></i>Range Slider</div></a></li>
-                                <li><a href="component-ratings.html"><div><i class="icon-star3"></i>Star Ratings</div></a></li>
-                            </ul>
-                            <ul class="mega-menu-column col-5">
-                                <li><a href="pricing.html"><div><i class="icon-dollar"></i>Pricing Boxes</div></a></li>
-                                <li><a href="process-steps.html"><div><i class="icon-thumbs-up"></i>Process Steps</div></a></li>
-                                <li><a href="promo-boxes.html"><div><i class="icon-rocket"></i>Promo Boxes</div></a></li>
-                                <li><a href="quotes-blockquotes.html"><div><i class="icon-quote-left"></i>Blockquotes</div></a></li>
-                                <li><a href="responsive.html"><div><i class="icon-laptop2"></i>Responsive</div></a></li>
-                                <li><a href="sections.html"><div><i class="icon-folder-open"></i>Sections</div></a></li>
-                                <li><a href="social-icons.html"><div><i class="icon-facebook2"></i>Social Icons</div></a></li>
-                                <li><a href="component-select-picker.html"><div><i class="icon-select"></i>Select Picker</div></a></li>
-                                <li><a href="component-select-box.html"><div><i class="icon-line-columns"></i>Select Boxes</div></a></li>
-                            </ul>
-                            <ul class="mega-menu-column col-5">
-                                <li><a href="style-boxes.html"><div><i class="icon-exclamation-sign"></i>Alert Boxes</div></a></li>
-                                <li><a href="styled-icons.html"><div><i class="icon-flag2"></i>Styled Icons</div></a></li>
-                                <li><a href="tables.html"><div><i class="icon-table"></i>Tables</div></a></li>
-                                <li><a href="tabs.html"><div><i class="icon-star3"></i>Tabs</div></a></li>
-                                <li><a href="testimonials-twitter.html"><div><i class="icon-user4"></i>Testimonials</div></a></li>
-                                <li><a href="thumbnails-slider.html"><div><i class="icon-camera3"></i>Thumbnails</div></a></li>
-                                <li><a href="toggles-accordions.html"><div><i class="icon-ok-circle"></i>Toggles</div></a></li>
-                                <li><a href="component-radios-switches.html"><div><i class="icon-line-square-check"></i>Radios &amp; Switches</div></a></li>
-                                <li><a href="component-typeahead.html"><div><i class="icon-type"></i>Input Typeahead</div></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-
-                <!-- Top Cart
+                <!-- Logo
                 ============================================= -->
-                <div id="top-cart">
-                    <a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
-                    <div class="top-cart-content">
-                        <div class="top-cart-title">
-                            <h4>Shopping Cart</h4>
-                        </div>
-                        <div class="top-cart-items">
-                            <div class="top-cart-item clearfix">
-                                <div class="top-cart-item-image">
-                                    <a href="#"><img src="../../../canvashtml-cdn.semicolonweb.com/images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+                <div id="logo">
+                    <a href="index.html" class="standard-logo" data-dark-logo="{{ asset('images/logo-dark.png') }}"><img
+                                src="{{ asset('images/logo.png') }}" alt="Canvas Logo"></a>
+                    <a href="index.html" class="retina-logo"
+                       data-dark-logo="{{ asset('images/logo-dark@2x.png') }}"><img
+                                src="{{ asset('images/logo%402x.png') }}" alt="Canvas Logo"></a>
+                </div><!-- #logo end -->
+
+                <!-- Primary Navigation
+                ============================================= -->
+                <nav id="primary-menu" class="dark">
+
+                    <ul>
+                        <li class="current"><a href="index.html">
+                                <div>Home</div>
+                            </a>
+                            <ul>
+                                <li><a href="index-corporate.html">
+                                        <div>Home - Corporate</div>
+                                    </a>
+                                    <ul>
+                                        <li><a href="index-corporate.html">
+                                                <div>Corporate - Layout 1</div>
+                                            </a></li>
+                                        <li><a href="index-corporate-2.html">
+                                                <div>Corporate - Layout 2</div>
+                                            </a></li>
+                                        <li><a href="index-corporate-3.html">
+                                                <div>Corporate - Layout 3</div>
+                                            </a></li>
+                                        <li><a href="index-corporate-4.html">
+                                                <div>Corporate - Layout 4</div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">
+                                <div>Features</div>
+                            </a>
+                            <ul>
+
+                                <li><a href="#">
+                                        <div><i class="icon-umbrella"></i>Headers</div>
+                                    </a>
+                                    <ul>
+                                        <li><a href="header-light.html">
+                                                <div>Light Version</div>
+                                            </a></li>
+                                        <li><a href="header-dark.html">
+                                                <div>Dark Version</div>
+                                            </a></li>
+                                        <li><a href="header-transparent.html">
+                                                <div>Transparent</div>
+                                            </a></li>
+                                        <li><a href="header-semi-transparent.html">
+                                                <div>Semi Transparent</div>
+                                            </a>
+                                            <ul>
+                                                <li><a href="header-semi-transparent.html">
+                                                        <div>Light Version</div>
+                                                    </a></li>
+                                                <li><a href="header-semi-transparent-dark.html">
+                                                        <div>Dark Version</div>
+                                                    </a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="header-side-left.html">
+                                                <div>Left Side Header</div>
+                                            </a>
+                                            <ul>
+                                                <li><a href="header-side-left.html">
+                                                        <div>Fixed Position</div>
+                                                    </a></li>
+                                                <li><a href="header-side-left-open.html">
+                                                        <div>OnClick Open</div>
+                                                    </a></li>
+                                                <li><a href="header-side-left-open-push.html">
+                                                        <div>Push Content</div>
+                                                    </a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="header-side-right.html">
+                                                <div>Right Side Header</div>
+                                            </a>
+                                            <ul>
+                                                <li><a href="header-side-right.html">
+                                                        <div>Fixed Position</div>
+                                                    </a></li>
+                                                <li><a href="header-side-right-open.html">
+                                                        <div>OnClick Open</div>
+                                                    </a></li>
+                                                <li><a href="header-side-right-open-push.html">
+                                                        <div>Push Content</div>
+                                                    </a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="header-floating.html">
+                                                <div>Floating Version</div>
+                                            </a></li>
+                                        <li><a href="static-sticky.html">
+                                                <div>Static Sticky</div>
+                                            </a></li>
+                                        <li><a href="responsive-sticky.html">
+                                                <div>Responsive Sticky</div>
+                                            </a></li>
+                                        <li><a href="logo-changer.html">
+                                                <div>Alternate Logos</div>
+                                            </a></li>
+                                        <li><a href="alternate-mobile-menu.html">
+                                                <div>Alternate Mobile Menu</div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="mega-menu"><a href="#">
+                                <div>Pages</div>
+                            </a>
+                            <div class="mega-menu-content style-2 clearfix">
+                                <ul class="mega-menu-column col-md-3">
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Introduction</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="about.html">
+                                                    <div>About Us</div>
+                                                </a></li>
+                                            <li><a href="about-2.html">
+                                                    <div>About Us - Layout 2</div>
+                                                </a></li>
+                                            <li><a href="about-me.html">
+                                                    <div>About Me</div>
+                                                </a></li>
+                                            <li><a href="team.html">
+                                                    <div>Team Members</div>
+                                                </a></li>
+                                            <li><a href="jobs.html">
+                                                    <div>Careers</div>
+                                                </a></li>
+                                            <li><a href="side-navigation.html">
+                                                    <div>Side Navigation</div>
+                                                </a></li>
+                                            <li><a href="page-submenu.html">
+                                                    <div>Page Submenu</div>
+                                                </a></li>
+                                            <li><a href="sitemap.html">
+                                                    <div>Sitemap</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </li>
+                        <li class="mega-menu"><a href="#">
+                                <div>Portfolio</div>
+                            </a>
+                            <div class="mega-menu-content style-2 clearfix">
+
+                                <ul class="mega-menu-column col-5">
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Single Project</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="portfolio-single-extended.html">
+                                                    <div>Extended Item</div>
+                                                </a></li>
+                                            <li><a href="portfolio-single-fullwidth.html">
+                                                    <div>Parallax Image</div>
+                                                </a></li>
+                                            <li><a href="portfolio-single-gallery-full.html">
+                                                    <div>Slider Gallery</div>
+                                                </a></li>
+                                            <li><a href="portfolio-single-video-fullwidth-left-sidebar.html">
+                                                    <div>HTML5 Video</div>
+                                                </a></li>
+                                            <li><a href="portfolio-single-thumbs-right-sidebar.html">
+                                                    <div>Masonry Thumbs</div>
+                                                </a></li>
+                                            <li><a href="portfolio-single-video-both-sidebar.html">
+                                                    <div>Embed Video</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="mega-menu-column col-5">
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Layouts</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="portfolio-nomargin.html">
+                                                    <div>Default</div>
+                                                </a></li>
+                                            <li><a href="portfolio-1-alt-right-sidebar.html">
+                                                    <div>Right Sidebar</div>
+                                                </a></li>
+                                            <li><a href="portfolio-3-left-sidebar.html">
+                                                    <div>Left Sidebar</div>
+                                                </a></li>
+                                            <li><a href="portfolio-2-both-sidebar.html">
+                                                    <div>Both Sidebar</div>
+                                                </a></li>
+                                            <li><a href="portfolio-fullwidth-notitle.html">
+                                                    <div>100% Width</div>
+                                                </a></li>
+                                            <li><a href="portfolio-parallax.html">
+                                                    <div>Parallax</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mega-menu"><a href="#">
+                                <div>Blog</div>
+                            </a>
+                            <div class="mega-menu-content style-2 clearfix">
+                                <ul class="mega-menu-column col-md-3">
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Default</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="blog.html">
+                                                    <div>Right Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-left-sidebar.html">
+                                                    <div>Left Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-both-sidebar.html">
+                                                    <div>Both Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-full-width.html">
+                                                    <div>Full Width</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Timeline</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="blog-timeline-right-sidebar.html">
+                                                    <div>Right Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-timeline-left-sidebar.html">
+                                                    <div>Left Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-timeline.html">
+                                                    <div>Full Width</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="mega-menu-column col-md-3">
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Masonry</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="blog-masonry.html">
+                                                    <div>4 Columns</div>
+                                                </a></li>
+                                            <li><a href="blog-masonry-3.html">
+                                                    <div>3 Columns</div>
+                                                </a></li>
+                                            <li><a href="blog-masonry-2.html">
+                                                    <div>2 Columns</div>
+                                                </a></li>
+                                            <li><a href="blog-masonry-full.html">
+                                                    <div>100% Width</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Grid</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="blog-grid.html">
+                                                    <div>4 Columns</div>
+                                                </a></li>
+                                            <li><a href="blog-grid-3.html">
+                                                    <div>3 Columns</div>
+                                                </a></li>
+                                            <li><a href="blog-grid-2.html">
+                                                    <div>2 Columns</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="mega-menu-column col-md-3">
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Small Thumbs</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="blog-small-left-sidebar.html">
+                                                    <div>Left Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-small.html">
+                                                    <div>Right Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-small-both-sidebar.html">
+                                                    <div>Both Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-small-full-width.html">
+                                                    <div>Full Width</div>
+                                                </a></li>
+                                            <li><a href="blog-small-alt.html">
+                                                    <div>Alternate Layout</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Item Splitting</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="blog-grid.html">
+                                                    <div>Pagination</div>
+                                                </a></li>
+                                            <li><a href="blog-masonry.html">
+                                                    <div>Infinite Scroll</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="mega-menu-column col-md-3">
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Single</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="blog-single.html">
+                                                    <div>Default Layout</div>
+                                                </a></li>
+                                            <li><a href="blog-single-left-sidebar.html">
+                                                    <div>Left Sidebar</div>
+                                                </a></li>
+                                            <li><a href="blog-single-full.html">
+                                                    <div>Full Width</div>
+                                                </a></li>
+                                            <li><a href="blog-single-small.html">
+                                                    <div>Small Image</div>
+                                                </a></li>
+                                            <li><a href="blog-single-split-right-sidebar.html">
+                                                    <div>Split Layout</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu-title"><a href="#">
+                                            <div>Comments Module</div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="blog-single-left-sidebar.html#comments">
+                                                    <div>Facebook Comments</div>
+                                                </a></li>
+                                            <li><a href="blog-single-small.html#comments">
+                                                    <div>Disqus Comments</div>
+                                                </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="shop.html">
+                                <div>Shop</div>
+                            </a>
+                            <ul>
+                                <li><a href="shop.html">
+                                        <div>4 Columns</div>
+                                    </a></li>
+                                <li><a href="shop-3.html">
+                                        <div>3 Columns</div>
+                                    </a>
+                                    <ul>
+                                        <li><a href="shop-3.html">
+                                                <div>Full Width</div>
+                                            </a></li>
+                                        <li><a href="shop-3-right-sidebar.html">
+                                                <div>Right Sidebar</div>
+                                            </a></li>
+                                        <li><a href="shop-3-left-sidebar.html">
+                                                <div>Left Sidebar</div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="404.html">
+                                        <div>2 Columns</div>
+                                    </a>
+                                    <ul>
+                                        <li><a href="shop-2-right-sidebar.html">
+                                                <div>Right Sidebar</div>
+                                            </a></li>
+                                        <li><a href="shop-2-left-sidebar.html">
+                                                <div>Left Sidebar</div>
+                                            </a></li>
+                                        <li><a href="shop-2-both-sidebar.html">
+                                                <div>Both Sidebar</div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="shop-1.html">
+                                        <div>1 Columns</div>
+                                    </a>
+                                    <ul>
+                                        <li><a href="shop-1.html">
+                                                <div>Full Width</div>
+                                            </a></li>
+                                        <li><a href="shop-1-right-sidebar.html">
+                                                <div>Right Sidebar</div>
+                                            </a></li>
+                                        <li><a href="shop-1-left-sidebar.html">
+                                                <div>Left Sidebar</div>
+                                            </a></li>
+                                        <li><a href="shop-1-both-sidebar.html">
+                                                <div>Both Sidebar</div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="shop-category-parallax.html">
+                                        <div>Categories - Parallax</div>
+                                    </a></li>
+                                <li><a href="shop-combination-filter.html">
+                                        <div>Combination Filter</div>
+                                    </a></li>
+                                <li><a href="shop-single.html">
+                                        <div>Single Product</div>
+                                    </a>
+                                    <ul>
+                                        <li><a href="shop-single.html">
+                                                <div>Full Width</div>
+                                            </a></li>
+                                        <li><a href="shop-single-right-sidebar.html">
+                                                <div>Right Sidebar</div>
+                                            </a></li>
+                                        <li><a href="shop-single-left-sidebar.html">
+                                                <div>Left Sidebar</div>
+                                            </a></li>
+                                        <li><a href="shop-single-both-sidebar.html">
+                                                <div>Both Sidebar</div>
+                                            </a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="cart.html">
+                                        <div>Cart</div>
+                                    </a></li>
+                                <li><a href="checkout.html">
+                                        <div>Checkout</div>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class="mega-menu"><a href="#">
+                                <div>Shortcodes</div>
+                            </a>
+                            <div class="mega-menu-content clearfix">
+                                <ul class="mega-menu-column col-5">
+                                    <li><a href="animations.html">
+                                            <div><i class="icon-magic"></i>Animations</div>
+                                        </a></li>
+                                    <li><a href="buttons.html">
+                                            <div><i class="icon-link"></i>Buttons</div>
+                                        </a></li>
+                                    <li><a href="carousel.html">
+                                            <div><i class="icon-heart3"></i>Carousel</div>
+                                        </a></li>
+                                    <li><a href="charts.html">
+                                            <div><i class="icon-bar-chart"></i>Charts</div>
+                                        </a></li>
+                                    <li><a href="clients.html">
+                                            <div><i class="icon-apple"></i>Clients</div>
+                                        </a></li>
+                                    <li><a href="columns-grids.html">
+                                            <div><i class="icon-th-large"></i>Columns</div>
+                                        </a></li>
+                                    <li><a href="counters.html">
+                                            <div><i class="icon-time"></i>Counters</div>
+                                        </a></li>
+                                    <li><a href="component-datatable.html">
+                                            <div><i class="icon-table"></i>Data Tables</div>
+                                        </a></li>
+                                    <li><a href="component-datepicker.html">
+                                            <div><i class="icon-calendar3"></i>Date &amp; Time Pickers</div>
+                                        </a></li>
+                                </ul>
+                                <ul class="mega-menu-column col-5">
+                                    <li><a href="dividers.html">
+                                            <div><i class="icon-indent-right"></i>Dividers</div>
+                                        </a></li>
+                                    <li><a href="featured-boxes.html">
+                                            <div><i class="icon-lightbulb"></i>Icon Boxes</div>
+                                        </a></li>
+                                    <li><a href="gallery.html">
+                                            <div><i class="icon-picture"></i>Galleries</div>
+                                        </a></li>
+                                    <li><a href="headings-dropcaps.html">
+                                            <div><i class="icon-pencil2"></i>Heading Styles</div>
+                                        </a></li>
+                                    <li><a href="icon-lists.html">
+                                            <div><i class="icon-list-alt"></i>Icon Lists</div>
+                                        </a></li>
+                                    <li><a href="labels-badges.html">
+                                            <div><i class="icon-plus-sign"></i>Labels</div>
+                                        </a></li>
+                                    <li><a href="lightbox.html">
+                                            <div><i class="icon-resize-full"></i>Lightbox</div>
+                                        </a></li>
+                                    <li><a href="component-editable.html">
+                                            <div><i class="icon-edit"></i>Editable Fields</div>
+                                        </a></li>
+                                    <li><a href="component-uploads.html">
+                                            <div><i class="icon-line-upload"></i>File Uploads</div>
+                                        </a></li>
+                                </ul>
+                                <ul class="mega-menu-column col-5">
+                                    <li><a href="lists-panels.html">
+                                            <div><i class="icon-th-list"></i>Lists &amp; Panels</div>
+                                        </a></li>
+                                    <li><a href="maps.html">
+                                            <div><i class="icon-map-marker2"></i>Maps</div>
+                                        </a></li>
+                                    <li><a href="media-embeds.html">
+                                            <div><i class="icon-play"></i>Media Embeds</div>
+                                        </a></li>
+                                    <li><a href="modal-popovers.html">
+                                            <div><i class="icon-move"></i>Modal Boxes</div>
+                                        </a></li>
+                                    <li><a href="navigation.html">
+                                            <div><i class="icon-align-justify2"></i>Navigations</div>
+                                        </a></li>
+                                    <li><a href="pagination-progress.html">
+                                            <div><i class="icon-cogs"></i>Pagination</div>
+                                        </a></li>
+                                    <li><a href="pie-skills.html">
+                                            <div><i class="icon-tasks"></i>Pies &amp; Skills</div>
+                                        </a></li>
+                                    <li><a href="component-range-slider.html">
+                                            <div><i class="icon-line-move"></i>Range Slider</div>
+                                        </a></li>
+                                    <li><a href="component-ratings.html">
+                                            <div><i class="icon-star3"></i>Star Ratings</div>
+                                        </a></li>
+                                </ul>
+                                <ul class="mega-menu-column col-5">
+                                    <li><a href="pricing.html">
+                                            <div><i class="icon-dollar"></i>Pricing Boxes</div>
+                                        </a></li>
+                                    <li><a href="process-steps.html">
+                                            <div><i class="icon-thumbs-up"></i>Process Steps</div>
+                                        </a></li>
+                                    <li><a href="promo-boxes.html">
+                                            <div><i class="icon-rocket"></i>Promo Boxes</div>
+                                        </a></li>
+                                    <li><a href="quotes-blockquotes.html">
+                                            <div><i class="icon-quote-left"></i>Blockquotes</div>
+                                        </a></li>
+                                    <li><a href="responsive.html">
+                                            <div><i class="icon-laptop2"></i>Responsive</div>
+                                        </a></li>
+                                    <li><a href="sections.html">
+                                            <div><i class="icon-folder-open"></i>Sections</div>
+                                        </a></li>
+                                    <li><a href="social-icons.html">
+                                            <div><i class="icon-facebook2"></i>Social Icons</div>
+                                        </a></li>
+                                    <li><a href="component-select-picker.html">
+                                            <div><i class="icon-select"></i>Select Picker</div>
+                                        </a></li>
+                                    <li><a href="component-select-box.html">
+                                            <div><i class="icon-line-columns"></i>Select Boxes</div>
+                                        </a></li>
+                                </ul>
+                                <ul class="mega-menu-column col-5">
+                                    <li><a href="style-boxes.html">
+                                            <div><i class="icon-exclamation-sign"></i>Alert Boxes</div>
+                                        </a></li>
+                                    <li><a href="styled-icons.html">
+                                            <div><i class="icon-flag2"></i>Styled Icons</div>
+                                        </a></li>
+                                    <li><a href="tables.html">
+                                            <div><i class="icon-table"></i>Tables</div>
+                                        </a></li>
+                                    <li><a href="tabs.html">
+                                            <div><i class="icon-star3"></i>Tabs</div>
+                                        </a></li>
+                                    <li><a href="testimonials-twitter.html">
+                                            <div><i class="icon-user4"></i>Testimonials</div>
+                                        </a></li>
+                                    <li><a href="thumbnails-slider.html">
+                                            <div><i class="icon-camera3"></i>Thumbnails</div>
+                                        </a></li>
+                                    <li><a href="toggles-accordions.html">
+                                            <div><i class="icon-ok-circle"></i>Toggles</div>
+                                        </a></li>
+                                    <li><a href="component-radios-switches.html">
+                                            <div><i class="icon-line-square-check"></i>Radios &amp; Switches</div>
+                                        </a></li>
+                                    <li><a href="component-typeahead.html">
+                                            <div><i class="icon-type"></i>Input Typeahead</div>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Top Cart
+                    ============================================= -->
+                    <div id="top-cart">
+                        <a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
+                        <div class="top-cart-content">
+                            <div class="top-cart-title">
+                                <h4>Shopping Cart</h4>
+                            </div>
+                            <div class="top-cart-items">
+                                <div class="top-cart-item clearfix">
+                                    <div class="top-cart-item-image">
+                                        <a href="#"><img
+                                                    src="../../../canvashtml-cdn.semicolonweb.com/images/shop/small/1.jpg"
+                                                    alt="Blue Round-Neck Tshirt"/></a>
+                                    </div>
+                                    <div class="top-cart-item-desc">
+                                        <a href="#">Blue Round-Neck Tshirt</a>
+                                        <span class="top-cart-item-price">$19.99</span>
+                                        <span class="top-cart-item-quantity">x 2</span>
+                                    </div>
                                 </div>
-                                <div class="top-cart-item-desc">
-                                    <a href="#">Blue Round-Neck Tshirt</a>
-                                    <span class="top-cart-item-price">$19.99</span>
-                                    <span class="top-cart-item-quantity">x 2</span>
+                                <div class="top-cart-item clearfix">
+                                    <div class="top-cart-item-image">
+                                        <a href="#"><img
+                                                    src="../../../canvashtml-cdn.semicolonweb.com/images/shop/small/6.jpg"
+                                                    alt="Light Blue Denim Dress"/></a>
+                                    </div>
+                                    <div class="top-cart-item-desc">
+                                        <a href="#">Light Blue Denim Dress</a>
+                                        <span class="top-cart-item-price">$24.99</span>
+                                        <span class="top-cart-item-quantity">x 3</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="top-cart-item clearfix">
-                                <div class="top-cart-item-image">
-                                    <a href="#"><img src="../../../canvashtml-cdn.semicolonweb.com/images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
-                                </div>
-                                <div class="top-cart-item-desc">
-                                    <a href="#">Light Blue Denim Dress</a>
-                                    <span class="top-cart-item-price">$24.99</span>
-                                    <span class="top-cart-item-quantity">x 3</span>
-                                </div>
+                            <div class="top-cart-action clearfix">
+                                <span class="fleft top-checkout-price">$114.95</span>
+                                <button class="button button-3d button-small nomargin fright">View Cart</button>
                             </div>
                         </div>
-                        <div class="top-cart-action clearfix">
-                            <span class="fleft top-checkout-price">$114.95</span>
-                            <button class="button button-3d button-small nomargin fright">View Cart</button>
-                        </div>
-                    </div>
-                </div><!-- #top-cart end -->
+                    </div><!-- #top-cart end -->
 
-                <!-- Top Search
-                ============================================= -->
-                <div id="top-search">
-                    <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                    <form action="http://themes.semicolonweb.com/html/canvas/search.php" method="get">
-                        <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-                    </form>
-                </div><!-- #top-search end -->
+                    <!-- Top Search
+                    ============================================= -->
+                    <div id="top-search">
+                        <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                        <form action="http://themes.semicolonweb.com/html/canvas/search.php" method="get">
+                            <input type="text" name="q" class="form-control" value=""
+                                   placeholder="Type &amp; Hit Enter..">
+                        </form>
+                    </div><!-- #top-search end -->
 
-            </nav><!-- #primary-menu end -->
+                </nav><!-- #primary-menu end -->
+
+            </div>
 
         </div>
 
-    </div>
+    </header>
+    <!-- #header end -->
+    <section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
+        <div class="slider-parallax-inner">
 
-</header><!-- #header end -->
+            <div class="swiper-container swiper-parent">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide dark" style="background-image: url('{{ asset('images/slider/swiper/1.jpg')}}');">
+                        <div class="container clearfix">
+                            <div class="slider-caption slider-caption-center">
+                                <h2 data-caption-animate="fadeInUp">Welcome to Canvas</h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on your own Canvas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide dark">
+                        <div class="container clearfix">
+                            <div class="slider-caption slider-caption-center">
+                                <h2 data-caption-animate="fadeInUp">Beautifully Flexible</h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
+                            </div>
+                        </div>
+                        <div class="video-wrap">
+                            <video id="slide-video" poster="{{ asset('images/videos/deskwork.jpg')}}" preload="auto" loop autoplay muted>
+                                <source src='http://46.101.174.22/images/videos/deskwork.webm' type='video/webm' />
+                                <source src='http://46.101.174.22/images/videos/deskwork.mp4' type='video/mp4' />
+                            </video>
+                            <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('{{ asset('images/slider/swiper/3.jpg')}}'); background-position: center top;">
+                        <div class="container clearfix">
+                            <div class="slider-caption">
+                                <h2 data-caption-animate="fadeInUp">Great Performance</h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
+                <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
+            </div>
 
+            <a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
 
+        </div>
+    </section>
 
-
-
-<br/>
     <br/>
     <br/>
     <br/>
@@ -391,13 +961,7 @@
     <br/>
     <br/>
     <br/>
-
-
-
-
-
-
-
+    <br/>
 
 
     <!-- Footer
@@ -416,11 +980,12 @@
 
                         <div class="widget clearfix">
 
-                            <img src="../../../canvashtml-cdn.semicolonweb.com/images/footer-widget-logo.png" alt="" class="footer-logo">
+                            <img src="{{ asset('images/footer-widget-logo.png') }}" alt="" class="footer-logo">
 
-                            <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+                            <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp;
+                                <strong>Flexible</strong> Design Standards.</p>
 
-                            <div style="background: url('../../../canvashtml-cdn.semicolonweb.com/images/world-map.png') no-repeat center center; background-size: 100%;">
+                            <div style="background: url('{{ asset('images/world-map.png') }}') no-repeat center center; background-size: 100%;">
                                 <address>
                                     <strong>Headquarters:</strong><br>
                                     795 Folsom Ave, Suite 600<br>
@@ -507,12 +1072,16 @@
                         <div class="row">
 
                             <div class="col-md-6 bottommargin-sm">
-                                <div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+                                <div class="counter counter-small"><span data-from="50" data-to="15065421"
+                                                                         data-refresh-interval="80" data-speed="3000"
+                                                                         data-comma="true"></span></div>
                                 <h5 class="nobottommargin">Total Downloads</h5>
                             </div>
 
                             <div class="col-md-6 bottommargin-sm">
-                                <div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+                                <div class="counter counter-small"><span data-from="100" data-to="18465"
+                                                                         data-refresh-interval="50" data-speed="2000"
+                                                                         data-comma="true"></span></div>
                                 <h5 class="nobottommargin">Clients</h5>
                             </div>
 
@@ -521,12 +1090,16 @@
                     </div>
 
                     <div class="widget subscribe-widget clearfix">
-                        <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+                        <h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp;
+                            Inside Scoops:</h5>
                         <div class="widget-subscribe-form-result"></div>
-                        <form id="widget-subscribe-form" action="http://themes.semicolonweb.com/html/canvas/include/subscribe.php" role="form" method="post" class="nobottommargin">
+                        <form id="widget-subscribe-form"
+                              action="http://themes.semicolonweb.com/html/canvas/include/subscribe.php" role="form"
+                              method="post" class="nobottommargin">
                             <div class="input-group divcenter">
                                 <span class="input-group-addon"><i class="icon-email2"></i></span>
-                                <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+                                <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email"
+                                       class="form-control required email" placeholder="Enter your Email">
                                 <span class="input-group-btn">
 										<button class="btn btn-success" type="submit">Subscribe</button>
 									</span>
@@ -539,18 +1112,28 @@
                         <div class="row">
 
                             <div class="col-md-6 clearfix bottommargin-sm">
-                                <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+                                <a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin"
+                                   style="margin-right: 10px;">
                                     <i class="icon-facebook"></i>
                                     <i class="icon-facebook"></i>
                                 </a>
-                                <a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+                                <a href="#">
+                                    <small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on
+                                        Facebook
+                                    </small>
+                                </a>
                             </div>
                             <div class="col-md-6 clearfix">
-                                <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+                                <a href="#" class="social-icon si-dark si-colored si-rss nobottommargin"
+                                   style="margin-right: 10px;">
                                     <i class="icon-rss"></i>
                                     <i class="icon-rss"></i>
                                 </a>
-                                <a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+                                <a href="#">
+                                    <small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS
+                                        Feeds
+                                    </small>
+                                </a>
                             </div>
 
                         </div>
@@ -619,7 +1202,9 @@
 
                     <div class="clear"></div>
 
-                    <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+                    <i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i
+                            class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i
+                            class="icon-skype2"></i> CanvasOnSkype
                 </div>
 
             </div>
@@ -627,26 +1212,96 @@
         </div><!-- #copyrights end -->
 
     </footer><!-- #footer end -->
-
+</div>
 
 
 <!-- External JavaScripts
-	============================================= -->
-<script type="text/javascript" src="{{ asset('js/jquery.js')}}"></script>
+    ============================================= -->
+<script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
 
 <!-- Footer Scripts
 ============================================= -->
-<script type="text/javascript" src="{{ asset('js/functions.js')}}"></script>
+<script type="text/javascript" src="{{ asset('js/functions.js') }}"></script>
 
-<div class="switcher clearfix"><div class="switcher-head"><span>Style Switcher<a href="#" id="switcher-reset-button" class="btn btn-danger fright btn-xs" style="margin-top: 12px;">Reset</a></span><div class="switcher-trigger icon-line-cog"></div></div><div class="switcher-body clearfix"><!-- <div id="switcher-op-layout"><a href="#" data-layout="stretched" class="button button-3d button-black" style="margin: 0 10px 0 0;">Wide</a><a href="#" data-layout="boxed" class="button button-3d button-white button-light nomargin">Boxed</a></div><div class="line"></div> --><div class="switcher-op-pt"><h5>Page Loading Styles:</h5><a href="index4d84.html?page-loader=1" class="button button-3d button-small noleftmargin">1</a><a href="indexfa22.html?page-loader=2" class="button button-3d button-small">2</a><a href="index516e.html?page-loader=3" class="button button-3d button-small noleftmargin">3</a><a href="indexd0c8.html?page-loader=4" class="button button-3d button-small">4</a><a href="index9b48.html?page-loader=5" class="button button-3d button-small noleftmargin">5</a><a href="index221d.html?page-loader=6" class="button button-3d button-small">6</a><a href="index0d37.html?page-loader=7" class="button button-3d button-small">7</a><a href="index2614.html?page-loader=8" class="button button-3d button-small">8</a><a href="index8316.html?page-loader=9" class="button button-3d button-small noleftmargin">9</a><a href="indexa35a.html?page-loader=10" class="button button-3d button-small">10</a><a href="index5ae2.html?page-loader=11" class="button button-3d button-small">11</a><a href="index17b7.html?page-loader=12" class="button button-3d button-small noleftmargin norightmargin">12</a><a href="index2bdc.html?page-loader=13" class="button button-3d button-small noleftmargin">13</a><a href="indexcff7.html?page-loader=14" class="button button-3d button-small">14</a></div><div class="line"></div><div class="switcher-op-colors"><h5>Choose Color:</h5><ul id="switcher-option-color" class="switcher-op-selectors clearfix"><li style="background-color: #1abc9c;" data-color="1abc9c"></li><li style="background-color: #3498db;" data-color="3498db"></li><li style="background-color: #9b59b6;" data-color="9b59b6"></li><li style="background-color: #34495e;" data-color="34495e"></li><li style="background-color: #e67e22;" data-color="e67e22"></li><li style="background-color: #c0392b;" data-color="c0392b"></li><li style="background-color: #336E7B;" data-color="336E7B"></li><li style="background-color: #3A539B;" data-color="3A539B"></li><li style="background-color: #019875;" data-color="019875"></li></ul></div><div class="line"></div><!-- <div class="switcher-op-patterns"><p><strong>Choose Pattern:</strong></p><ul id="switcher-option-pattern" class="switcher-op-selectors clearfix"><li style="background-image: url('switcher/patterns/light/pattern1.png');" data-url="switcher/patterns/light/pattern1.png"></li><li style="background-image: url('switcher/patterns/light/pattern3.png');" data-url="switcher/patterns/light/pattern3.png"></li><li style="background-image: url('switcher/patterns/light/pattern4.png');" data-url="switcher/patterns/light/pattern4.png"></li><li style="background-image: url('switcher/patterns/light/pattern6.png');" data-url="switcher/patterns/light/pattern6.png"></li><li style="background-image: url('switcher/patterns/light/pattern7.png');" data-url="switcher/patterns/light/pattern7.png"></li><li style="background-image: url('switcher/patterns/light/pattern8.png');" data-url="switcher/patterns/light/pattern8.png"></li><li style="background-image: url('switcher/patterns/light/pattern9.png');" data-url="switcher/patterns/light/pattern9.png"></li><li style="background-image: url('switcher/patterns/light/pattern10.png');" data-url="switcher/patterns/light/pattern10.png"></li><li style="background-image: url('switcher/patterns/light/pattern13.png');" data-url="switcher/patterns/light/pattern13.png"></li><li style="background-image: url('switcher/patterns/dark/pattern1.png');" data-url="switcher/patterns/dark/pattern1.png"></li><li style="background-image: url('switcher/patterns/dark/pattern2.png');" data-url="switcher/patterns/dark/pattern2.png"></li><li style="background-image: url('switcher/patterns/dark/pattern3.png');" data-url="switcher/patterns/dark/pattern3.png"></li><li style="background-image: url('switcher/patterns/dark/pattern4.png');" data-url="switcher/patterns/dark/pattern4.png"></li><li style="background-image: url('switcher/patterns/dark/pattern5.png');" data-url="switcher/patterns/dark/pattern5.png"></li><li style="background-image: url('switcher/patterns/dark/pattern6.png');" data-url="switcher/patterns/dark/pattern6.png"></li><li style="background-image: url('switcher/patterns/dark/pattern7.png');" data-url="switcher/patterns/dark/pattern7.png"></li><li style="background-image: url('switcher/patterns/dark/pattern8.png');" data-url="switcher/patterns/dark/pattern8.png"></li><li style="background-image: url('switcher/patterns/dark/pattern9.png');" data-url="switcher/patterns/dark/pattern9.png"></li></ul></div><div class="line"></div><div class="switcher-op-bgimages"><p><strong>Background Images:</strong></p><ul id="switcher-option-bgimage" class="switcher-op-selectors clearfix"><li data-url="images/parallax/home/1.jpg"><img src="switcher/bgimages/1.jpg" alt="Background Image 1" title="Background Image 1"/></li><li data-url="images/parallax/home/2.jpg"><img src="switcher/bgimages/2.jpg" alt="Background Image 2" title="Background Image 2"/></li><li data-url="images/parallax/home/4.jpg"><img src="switcher/bgimages/4.jpg" alt="Background Image 3" title="Background Image 3"/></li><li data-url="images/parallax/home/5.jpg"><img src="switcher/bgimages/5.jpg" alt="Background Image 4" title="Background Image 4"/></li><li data-url="images/parallax/home/6.jpg"><img src="switcher/bgimages/6.jpg" alt="Background Image 5" title="Background Image 5"/></li><li data-url="images/parallax/home/7.jpg"><img src="switcher/bgimages/7.jpg" alt="Background Image 6" title="Background Image 6"/></li><li data-url="images/parallax/home/9.jpg"><img src="switcher/bgimages/9.jpg" alt="Background Image 7" title="Background Image 7"/></li><li data-url="images/parallax/home/10.jpg"><img src="switcher/bgimages/10.jpg" alt="Background Image 8" title="Background Image 8"/></li><li data-url="images/parallax/home/11.jpg"><img src="switcher/bgimages/11.jpg" alt="Background Image 9" title="Background Image 9"/></li></ul></div><div class="line"></div> --><div id="switcher-option-footer" class="switcher-op-footerc clearfix"><a href="dark/index.html" class="button button-3d button-large button-black center noleftmargin notopmargin nobottommargin" style="padding:0 25px;">Dark</a><a href="intro.html" class="button button-3d button-large button-black center nomargin" style="padding:0 25px;">Demos</a></div></div></div><script type="text/javascript" src="switcher/switcher.js"></script><script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','{{ asset('analytics.js')}}','ga');
+<div class="switcher clearfix">
+    <div class="switcher-head"><span>Style Switcher<a href="#" id="switcher-reset-button"
+                                                      class="btn btn-danger fright btn-xs"
+                                                      style="margin-top: 12px;">Reset</a></span>
+        <div class="switcher-trigger icon-line-cog"></div>
+    </div>
+    <div class="switcher-body clearfix">
+        <!-- <div id="switcher-op-layout"><a href="#" data-layout="stretched" class="button button-3d button-black" style="margin: 0 10px 0 0;">Wide</a><a href="#" data-layout="boxed" class="button button-3d button-white button-light nomargin">Boxed</a></div><div class="line"></div> -->
+        <div class="switcher-op-pt"><h5>Page Loading Styles:</h5><a href="index4d84.html?page-loader=1"
+                                                                    class="button button-3d button-small noleftmargin">1</a><a
+                    href="indexfa22.html?page-loader=2" class="button button-3d button-small">2</a><a
+                    href="index516e.html?page-loader=3" class="button button-3d button-small noleftmargin">3</a><a
+                    href="indexd0c8.html?page-loader=4" class="button button-3d button-small">4</a><a
+                    href="index9b48.html?page-loader=5" class="button button-3d button-small noleftmargin">5</a><a
+                    href="index221d.html?page-loader=6" class="button button-3d button-small">6</a><a
+                    href="index0d37.html?page-loader=7" class="button button-3d button-small">7</a><a
+                    href="index2614.html?page-loader=8" class="button button-3d button-small">8</a><a
+                    href="index8316.html?page-loader=9" class="button button-3d button-small noleftmargin">9</a><a
+                    href="indexa35a.html?page-loader=10" class="button button-3d button-small">10</a><a
+                    href="index5ae2.html?page-loader=11" class="button button-3d button-small">11</a><a
+                    href="index17b7.html?page-loader=12"
+                    class="button button-3d button-small noleftmargin norightmargin">12</a><a
+                    href="index2bdc.html?page-loader=13" class="button button-3d button-small noleftmargin">13</a><a
+                    href="indexcff7.html?page-loader=14" class="button button-3d button-small">14</a></div>
+        <div class="line"></div>
+        <div class="switcher-op-colors"><h5>Choose Color:</h5>
+            <ul id="switcher-option-color" class="switcher-op-selectors clearfix">
+                <li style="background-color: #1abc9c;" data-color="1abc9c"></li>
+                <li style="background-color: #3498db;" data-color="3498db"></li>
+                <li style="background-color: #9b59b6;" data-color="9b59b6"></li>
+                <li style="background-color: #34495e;" data-color="34495e"></li>
+                <li style="background-color: #e67e22;" data-color="e67e22"></li>
+                <li style="background-color: #c0392b;" data-color="c0392b"></li>
+                <li style="background-color: #336E7B;" data-color="336E7B"></li>
+                <li style="background-color: #3A539B;" data-color="3A539B"></li>
+                <li style="background-color: #019875;" data-color="019875"></li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <!-- <div class="switcher-op-patterns"><p><strong>Choose Pattern:</strong></p><ul id="switcher-option-pattern" class="switcher-op-selectors clearfix"><li style="background-image: url('switcher/patterns/light/pattern1.png');" data-url="switcher/patterns/light/pattern1.png"></li><li style="background-image: url('switcher/patterns/light/pattern3.png');" data-url="switcher/patterns/light/pattern3.png"></li><li style="background-image: url('switcher/patterns/light/pattern4.png');" data-url="switcher/patterns/light/pattern4.png"></li><li style="background-image: url('switcher/patterns/light/pattern6.png');" data-url="switcher/patterns/light/pattern6.png"></li><li style="background-image: url('switcher/patterns/light/pattern7.png');" data-url="switcher/patterns/light/pattern7.png"></li><li style="background-image: url('switcher/patterns/light/pattern8.png');" data-url="switcher/patterns/light/pattern8.png"></li><li style="background-image: url('switcher/patterns/light/pattern9.png');" data-url="switcher/patterns/light/pattern9.png"></li><li style="background-image: url('switcher/patterns/light/pattern10.png');" data-url="switcher/patterns/light/pattern10.png"></li><li style="background-image: url('switcher/patterns/light/pattern13.png');" data-url="switcher/patterns/light/pattern13.png"></li><li style="background-image: url('switcher/patterns/dark/pattern1.png');" data-url="switcher/patterns/dark/pattern1.png"></li><li style="background-image: url('switcher/patterns/dark/pattern2.png');" data-url="switcher/patterns/dark/pattern2.png"></li><li style="background-image: url('switcher/patterns/dark/pattern3.png');" data-url="switcher/patterns/dark/pattern3.png"></li><li style="background-image: url('switcher/patterns/dark/pattern4.png');" data-url="switcher/patterns/dark/pattern4.png"></li><li style="background-image: url('switcher/patterns/dark/pattern5.png');" data-url="switcher/patterns/dark/pattern5.png"></li><li style="background-image: url('switcher/patterns/dark/pattern6.png');" data-url="switcher/patterns/dark/pattern6.png"></li><li style="background-image: url('switcher/patterns/dark/pattern7.png');" data-url="switcher/patterns/dark/pattern7.png"></li><li style="background-image: url('switcher/patterns/dark/pattern8.png');" data-url="switcher/patterns/dark/pattern8.png"></li><li style="background-image: url('switcher/patterns/dark/pattern9.png');" data-url="switcher/patterns/dark/pattern9.png"></li></ul></div><div class="line"></div><div class="switcher-op-bgimages"><p><strong>Background Images:</strong></p><ul id="switcher-option-bgimage" class="switcher-op-selectors clearfix"><li data-url="images/parallax/home/1.jpg"><img src="switcher/bgimages/1.jpg" alt="Background Image 1" title="Background Image 1"/></li><li data-url="images/parallax/home/2.jpg"><img src="switcher/bgimages/2.jpg" alt="Background Image 2" title="Background Image 2"/></li><li data-url="images/parallax/home/4.jpg"><img src="switcher/bgimages/4.jpg" alt="Background Image 3" title="Background Image 3"/></li><li data-url="images/parallax/home/5.jpg"><img src="switcher/bgimages/5.jpg" alt="Background Image 4" title="Background Image 4"/></li><li data-url="images/parallax/home/6.jpg"><img src="switcher/bgimages/6.jpg" alt="Background Image 5" title="Background Image 5"/></li><li data-url="images/parallax/home/7.jpg"><img src="switcher/bgimages/7.jpg" alt="Background Image 6" title="Background Image 6"/></li><li data-url="images/parallax/home/9.jpg"><img src="switcher/bgimages/9.jpg" alt="Background Image 7" title="Background Image 7"/></li><li data-url="images/parallax/home/10.jpg"><img src="switcher/bgimages/10.jpg" alt="Background Image 8" title="Background Image 8"/></li><li data-url="images/parallax/home/11.jpg"><img src="switcher/bgimages/11.jpg" alt="Background Image 9" title="Background Image 9"/></li></ul></div><div class="line"></div> -->
+        <div id="switcher-option-footer" class="switcher-op-footerc clearfix"><a href="dark/index.html"
+                                                                                 class="button button-3d button-large button-black center noleftmargin notopmargin nobottommargin"
+                                                                                 style="padding:0 25px;">Dark</a><a
+                    href="intro.html" class="button button-3d button-large button-black center nomargin"
+                    style="padding:0 25px;">Demos</a></div>
+    </div>
+</div>
+<script type="text/javascript" src="switcher/switcher.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '{{ asset('analytics.js') }}', 'ga');
     ga('create', 'UA-23255544-12', 'auto');
     ga('send', 'pageview');
-</script><script>jQuery(document).ready(function(e){e("#primary-menu > ul li").find('.new-badge').children("div").append('<span class="label label-danger" style="display:inline-block;margin-left:8px;position:relative;top:-1px;text-transform:none;">New</span>')});</script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"839484a19a","applicationID":"5289971","transactionName":"ZQEDZxZUD0FZVkxfX1xLNEENGglGVVkXVVFcEgBAS1wPVl1NFkZYQg==","queueTime":0,"applicationTime":1,"atts":"SUYAEV5OHE8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</script>
+<script>jQuery(document).ready(function (e) {
+        e("#primary-menu > ul li").find('.new-badge').children("div").append('<span class="label label-danger" style="display:inline-block;margin-left:8px;position:relative;top:-1px;text-transform:none;">New</span>')
+    });</script>
+<script type="text/javascript">window.NREUM || (NREUM = {});
+    NREUM.info = {
+        "beacon": "bam.nr-data.net",
+        "licenseKey": "839484a19a",
+        "applicationID": "5289971",
+        "transactionName": "ZQEDZxZUD0FZVkxfX1xLNEENGglGVVkXVVFcEgBAS1wPVl1NFkZYQg==",
+        "queueTime": 0,
+        "applicationTime": 1,
+        "atts": "SUYAEV5OHE8=",
+        "errorBeacon": "bam.nr-data.net",
+        "agent": ""
+    }</script>
+</body>
 
 <!-- Mirrored from themes.semicolonweb.com/html/canvas/index.php?page-loader=5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Jan 2018 15:06:31 GMT -->
 </html>
