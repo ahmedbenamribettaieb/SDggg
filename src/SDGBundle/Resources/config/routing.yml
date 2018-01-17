@@ -1,0 +1,3 @@
+sdg_homepage:
+    path:     /
+    defaults: { _controller: SDGBundle:Default:index }
