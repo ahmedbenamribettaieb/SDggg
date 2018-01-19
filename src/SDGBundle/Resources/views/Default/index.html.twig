@@ -4,6 +4,7 @@
 <!-- Mirrored from themes.semicolonweb.com/html/canvas/index.php?page-loader=5 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Jan 2018 15:06:31 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by HTTrack -->
+{% block head %}
 <head>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
@@ -227,7 +228,7 @@
 
 
 </head>
-
+{% endblock %}
 <body class="stretched" data-loader="5">
 
 <!-- Document Wrapper
@@ -363,11 +364,11 @@
 
                             </ul>
                         </li>
-                        <li class="mega-menu"><a href="#">
+                        <li ><a href="#">
                                 <div>Pages</div>
                             </a>
                             <div class="mega-menu-content style-2 clearfix">
-                                <ul class="mega-menu-column col-md-3">
+                                <ul >
                                     <li class="mega-menu-title"><a href="#">
                                             <div>Introduction</div>
                                         </a>
@@ -402,12 +403,12 @@
 
                             </div>
                         </li>
-                        <li class="mega-menu"><a href="#">
+                        <li ><a href="#">
                                 <div>Portfolio</div>
                             </a>
                             <div class="mega-menu-content style-2 clearfix">
 
-                                <ul class="mega-menu-column col-5">
+                                <ul >
                                     <li class="mega-menu-title"><a href="#">
                                             <div>Single Project</div>
                                         </a>
@@ -962,7 +963,9 @@
     <br/>
     <br/>
     <br/>
+    {% block content %}
 
+    {% endblock %}
 
     <!-- Footer
 		============================================= -->
