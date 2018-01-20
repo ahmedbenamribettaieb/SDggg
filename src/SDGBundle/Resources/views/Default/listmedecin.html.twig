@@ -127,24 +127,26 @@
 <div class="doctors-section pdt-100 pdb-70">
     <div class="container">
         <div class="row">
-            {% for article in article %}
-            <div class="col-md-4 col-sm-6">
+            {% for users in users %}
+                <div class="col-md-4 col-sm-6">
 
-                <div class="doctor-wrapper mb-30">
-                    <div class="doctor-media">
-                        <img src="{{ asset('assets/img/doctors/doctor-img-1.jpg') }}" alt="">
-                        <div class="doctor-time text-center">
-                            <p>Acceder a l'article</p>
+                    <div class="doctor-wrapper mb-30">
+                        <div class="doctor-media">
+
+                            <div class="doctor-time text-center">
+                                {{ users.specialite }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="doctor-body text-center">
-                        <h3 class="doctor-title"><a href="{{ path ('detail_article' ,{'id': article.id } ) }}">{{ article.nom }}</a></h3>
-                        <div class="doctor-content">
-                            <span>{{ article.specialite }}</span>
+                        <div class="doctor-body text-center">
+                            <h3 class="doctor-title"><a>{{ users.nom }}</a></h3>
+                            <div class="doctor-content">
+
+                                <span>{{ users.numtel }}</span>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
     </div>
@@ -157,7 +159,7 @@
 
 
 
-            {% block content %}
+{% block content %}
 
 {% endblock %}
 <footer class="footer pdt-100">

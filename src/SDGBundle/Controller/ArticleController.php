@@ -33,4 +33,25 @@ class ArticleController extends Controller
         }
         return $this->render("SDGBundle:Default:ajoutarticle.html.twig");
     }
+
+    public function listAction($specialite)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $article = $em->getRepository('SDGBundle:Article')->findBy(["specialite" => $specialite]);
+
+        return $this->render('SDGBundle:Default:listarticle.html.twig', array(
+            'article' => $article,
+        ));
+    }
+    public function detailAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $article = $em->getRepository('SDGBundle:Article')->find($id);
+
+        return $this->render('SDGBundle:Default:detailarticle.html.twig', array(
+            'article' => $article,
+        ));
+    }
 }

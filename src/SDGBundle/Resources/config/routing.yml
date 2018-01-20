@@ -20,3 +20,12 @@ sdg_medecin:
 ajout_article:
     path:     /ajoutarticle
     defaults: { _controller: SDGBundle:Article:ajout }
+list_article:
+    path:     /listarticle/{specialite}
+    defaults: { _controller: SDGBundle:Article:list }
+detail_article:
+    path:     /detailarticle/{id}
+    defaults: { _controller: SDGBundle:Article:detail }
+list_medecin:
+    path:     /listmedecin
+    defaults: { _controller: SDGBundle:User:list }

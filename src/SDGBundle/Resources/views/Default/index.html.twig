@@ -100,17 +100,17 @@
                     <ul class="dropdown">
 
 
-                        <li><a href="doctors-4-column.html"> Médecine générale </a></li>
-                        <li><a href="doctors-4-column.html"> Dérmatologie </a></li>
-                        <li><a href="doctors-3-column.html"> Endocrinologie</a></li>
-                        <li><a href="doctor-nayon.html"> Gastro-Entérologie</a></li>
-                        <li><a href="doctor-nayon.html">gynécologie </a></li>
-                        <li><a href="doctor-nayon.html">ophtalmologie </a></li>
-                        <li><a href="doctor-nayon.html">pédiatrie </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Médecine générale' } ) }}"> Médecine générale </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Dérmatologie' } ) }}"> Dérmatologie </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Endocrinologie' } ) }}"> Endocrinologie</a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Gastro-Entérologie' } ) }}"> Gastro-Entérologie</a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'gynécologie' } ) }}">gynécologie </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'ophtalmologie' } ) }}">ophtalmologie </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'pédiatrie' } ) }}">pédiatrie </a></li>
 
                     </ul>
                 </li>
-                <li><a href="javascript:void(0)">Nos Médecins</a>
+                <li><a href="{{ path('list_medecin') }}">Nos Médecins</a>
 
                 </li>
                 <li><a href="javascript:void(0)">Evenements</a>
