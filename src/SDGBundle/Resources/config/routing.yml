@@ -1,3 +1,7 @@
 sdg_homepage:
     path:     /
     defaults: { _controller: SDGBundle:Default:index }
+
+sdg_login:
+    path:     /signin
+    defaults: { _controller: SDGBundle:Default:login }
