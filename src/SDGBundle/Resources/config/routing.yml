@@ -5,3 +5,7 @@ sdg_homepage:
 sdg_login:
     path:     /signin
     defaults: { _controller: SDGBundle:Default:login }
+
+sdg_sgnin:
+    path:     /log
+    defaults: { _controller: SDGBundle:Default:signin }
