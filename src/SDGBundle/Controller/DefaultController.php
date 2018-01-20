@@ -15,4 +15,9 @@ class DefaultController extends Controller
     {
         return $this->render('SDGBundle:Default:signin.html.twig');
     }
+
+    public function signinAction()
+    {
+        return $this->render('SDGBundle:Security:login.html.twig');
+    }
 }

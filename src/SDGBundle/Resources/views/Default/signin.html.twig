@@ -73,7 +73,10 @@
                 <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
             </li>
             <li class="topbar-appertment-btn">
-                <a href="appointment.html">Appointment</a>
+                <a href= "{{ path('sdg_login') }}">Login</a>
+            </li>
+            <li class="topbar-appertment-btn">
+                <a href= "{{ path('sdg_login') }}">Sign up</a>
             </li>
         </ul>
     </div>
@@ -192,29 +195,11 @@
         <div class="row">
             <div class="col-lg-6 col-md-8 col-sm-10 pdt-100 pdb-100">
                 <div id="rootwizard" class="tab-wrapper">
-                    <h3>Login/Register</h3>
-                    <div class="navbar">
-                        <div class="navbar-inner">
-                            <ul class="step">
-                                <li class="step-1">
-                                    <a href="#h_tab_one" data-toggle="tab"> Register</a>
-                                </li>
-                                <li class="step-2">
-                                    <a href="#h_tab_two" data-toggle="tab"> Login</a>
+                    <h3>Login</h3>
+                    {% block fos_user_content %}
+                        {{ render(controller('FOSUserBundle:Security:login')) }}
+                    {% endblock fos_user_content %}
 
-                                    {% block fos_user_content %}
-                                        {{ render(controller('FOSUserBundle:Security:login')) }}
-                                    {% endblock fos_user_content %}
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Register-->
-
-                        <!--End Register -->
-                        <!-- Login -->
-                    <!--End Login -->
 
                     </div>
                 </div>
@@ -529,6 +514,7 @@
         <div class="status-mes"></div>
     </div>
 </div>
+
 
 
 <script data-cfasync="false"
