@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('SDGBundle:Default:index.html.twig');
     }
+
+    public function loginAction()
+    {
+        return $this->render('SDGBundle:Default:signin.html.twig');
+    }
 }
