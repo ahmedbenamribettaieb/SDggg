@@ -25,3 +25,6 @@ sdg_association:
 sdg_newevent:
     path:     /newevent
     defaults: { _controller: SDGBundle:Evenement:new }
+ajout_article:
+    path:     /ajoutarticle
+    defaults: { _controller: SDGBundle:Article:ajout }

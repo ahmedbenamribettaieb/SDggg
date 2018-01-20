@@ -64,9 +64,20 @@
             </li>
         </ul>
         <ul class="social-top list-inline text-right">
-            <li> Docteur  </li>
-            <li class="flaticon-surgeon">
+            <li>
+                <a href="#" class="facebook"><i class="fa fa-facebook-square"></i></a>
             </li>
+            <li>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li class="flaticon-surgeon">
+
+            </li>
+
+
         </ul>
     </div>
 </div>
@@ -78,7 +89,7 @@
                 <img src="{{ asset('assets/img/logo-top.png') }}" alt="">
             </a>
             <ul class="menu-border menuzord-menu menuzord-right">
-                <li class="active"><a href = "{{ path('ajout_article')}}">Ajouter un article</a>
+                <li class="active"><a href="">Ajouter un article</a>
 
                 </li>
 
@@ -87,6 +98,101 @@
         </div>
     </div>
 </header>
+
+
+<section class="appointment-slider-section" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-sm-10 pdt-100 pdb-100">
+                <div id="rootwizard" class="tab-wrapper">
+                    <h3>Rédiger votre article</h3>
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <ul class="step">
+                                <li class="step-1">
+                                    <a href="#h_tab_one" data-toggle="tab">Article</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div id="h_tab_one">
+                            <div class="appointment-form-wrapper row">
+                                <form method="POST">
+
+                                    <table>
+                                        <tr>
+                                            <td class="col-md-6">
+                                                <div class="input-field mb-30">
+                                                    <span class="form-desc">nom de l'article*</span>
+                                                    <input type="text" name="nom" class="form-control"
+                                                           required>
+                                                </div>
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-6">
+
+                                                <div class="input-field mb-30">
+                                                    <span class="form-desc">Specialité*</span>
+                                                    <select name="specialite" id="department" class="form-control">
+                                                        <option value="1">Specialité</option>
+                                                        <option value="Médecine générale">Médecine générale
+                                                        </option>
+                                                        <option value="Dérmatologie">Dérmatologie</option>
+                                                        <option value="outpatient-Endocrinologie">Endocrinologie
+                                                        </option>
+                                                        <option value="Gastro-Entérologie">Gastro-Entérologie
+                                                        </option>
+                                                        <option value="gynécologie">gynécologie</option>
+                                                        <option value="ophtalmologie">ophtalmologie</option>
+                                                        <option value="pédiatrie">pédiatrie</option>
+
+                                                    </select>
+                                                </div>
+                                            </td>
+
+
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="col-md-6">
+                                                <div class="input-field mb-30">
+                                                    <span class="form-desc">Description</span>
+
+                                                    <textarea name="description" class="form-control "
+                                                    > </textarea>
+                                                </div>
+                                            </td>
+
+
+                                        </tr>
+
+                                        <tr>
+                                            <td class="col-md-6">
+                                                <input type="submit" class="btn btn-primary next " value="poster">
+                                            </td>
+
+
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section class="experience-section pdt-100 pdb-70">
     <div class="container">
@@ -165,54 +271,7 @@
     </div>
 </section>
 
-<section class="pdt-100 pdb-70 testimonial-section">
-    <div class="container">
-        <div class="section-wapper text-center">
-            <h2 class="section-title">
-                Ce que notre client a dit</h2>
-            <p class="section-sub">  </p>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 mb-30">
-                <div class="testimonial-wrapper">
-                    <div class="content">
-                        <p>vos articles publiés sont trés riche, j'ai bien connus ma maladie a travers l'article de un de vos docteur que je viens de faire un rendez_vous avec lui</p>
-                        <div class="testimonial-meta">
-                            <h3>Mohsen ben Abdallah</h3>
-                            <span>ingénieur</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-30">
-                <div class="testimonial-wrapper">
-                    <div class="content">
-                        <p>j'ai remarqué que votre site est vraiment trés utile et efficace</p>
-                        <div class="testimonial-meta">
-                            <h3>Omar Ferouk</h3>
-                            <span>Businessman</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-30">
-                <div class="testimonial-wrapper">
-                    <div class="content">
-                        <p>J'ai remarque que tous les médecins sont trés compréhensible a propos ma maladies et il ya seux qui mon aider a travers des consultations gratuites </p>
-                        <div class="testimonial-meta">
-                            <h3>Nayen Ahmed</h3>
-                            <span>chommeur</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-{% block content %}
-
-{% endblock %}
 <footer class="footer pdt-100">
     <div class="container">
 
@@ -221,7 +280,9 @@
                 <div class="col-md-4 mb-30">
                     <div class="widget about-widget">
                         <h3 class="widget-title mb-20">About healthnor</h3>
-                        <p>Rapidiously reintermediate seamless customer service via installed base outsourcing. Competently exploit prospective leadership skills via corporate e-services. Assertively synergize resource maximizing relationships vis-a-vis.</p>
+                        <p>Rapidiously reintermediate seamless customer service via installed base outsourcing.
+                            Competently exploit prospective leadership skills via corporate e-services. Assertively
+                            synergize resource maximizing relationships vis-a-vis.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-30">
@@ -242,12 +303,14 @@
                 <div class="col-md-4 mb-30">
                     <div class="widget newsletter-widget">
                         <h3 class="widget-title">NEWSLETTER SIGNUP</h3>
-                        <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!</p>
+                        <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send
+                            spam!</p>
                         <form class="subscribe-form mailchimp" method="post">
                             <div class="clearfix">
                                 <div class="input-field">
                                     <label class="sr-only" for="email">Email</label>
-                                    <input id="subscribeEmail" type="email" name="subscribeEmail" class="validate form-control newsletter" placeholder="Your Email Please!">
+                                    <input id="subscribeEmail" type="email" name="subscribeEmail"
+                                           class="validate form-control newsletter" placeholder="Your Email Please!">
                                 </div>
                                 <button type="submit"><i class="fa fa-arrow-circle-right"></i></button>
                             </div>
@@ -290,7 +353,8 @@
 
         <div class="footer-bottom">
             <div class="copyright text-center pdt-30 pdb-30">
-                <p>Copyright 2017. All Rights Reserved by <a href="https://trendytheme.net/" target="_blank">Trendytheme</a></p>
+                <p>Copyright 2017. All Rights Reserved by <a href="https://trendytheme.net/"
+                                                             target="_blank">Trendytheme</a></p>
             </div>
         </div>
     </div>
@@ -303,7 +367,7 @@
 
 <script data-cfasync="false"
         src="{{ asset('cdn-cgi/scripts/af2821b0/cloudflare-static/email-decode.min.js') }}"></script>
-<script src="{{asset('assets/js/jquery-2.1.3.min.js')  }}"></script>
+<script src="{{ asset('assets/js/jquery-2.1.3.min.js') }}"></script>
 <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.inview.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.sticky.min.js') }}"></script>
