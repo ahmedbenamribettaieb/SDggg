@@ -30,4 +30,11 @@ class DefaultController extends Controller
     {
         return $this->render('SDGBundle:Default:espaceMedecin.html.twig');
     }
+
+    public function associationAction()
+    {
+        return $this->render('SDGBundle:Default:epaceAssociation.html.twig');
+    }
+
+
 }
