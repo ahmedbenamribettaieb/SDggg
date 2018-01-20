@@ -25,17 +25,17 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="string",length=255,nullable=true)
      */
     private $nom;
 
     /**
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="string",length=255,nullable=true)
      */
     private $prenom;
 
     /**
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="string",length=255,nullable=true)
      */
     private $adresse;
 
@@ -45,20 +45,20 @@ class User extends BaseUser
      */
     private $numtel;
     /**
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="string",length=255,nullable=true)
      */
     private $specialite;
     /**
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="string",length=255,nullable=true)
      */
     private $fondateur;
     /**
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="string",length=255,nullable=true)
      */
     private $description;
 
     /**
-     * @ORM\Column(type="date",length=255)
+     * @ORM\Column(type="date",length=255,nullable=true)
      */
 
     private $datedecreation;
