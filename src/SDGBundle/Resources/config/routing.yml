@@ -17,3 +17,11 @@ sdg_register:
 sdg_medecin:
     path:     /medecin
     defaults: { _controller: SDGBundle:Default:medecin }
+
+sdg_association:
+    path:     /assoc
+    defaults: { _controller: SDGBundle:Default:association }
+
+sdg_newevent:
+    path:     /newevent
+    defaults: { _controller: SDGBundle:Evenement:new }
