@@ -18,9 +18,11 @@ class RegistrationType extends AbstractType
             ->add('roles', CollectionType::class, array(
                     'entry_type' => ChoiceType::class,
                     'entry_options' => array(
+                        'label' => false,
                         'choices' => array(
-                            'ROLE_MEDECIN' => 'ROLE_MEDECIN',
-                            'ROLE_ASSOCIATION' => 'ROLE_ASSOCIATION'
+
+                            'MEDECIN' => 'ROLE_MEDECIN',
+                            'ASSOCIATION' => 'ROLE_ASSOCIATION'
                         )
                     )
                 )
