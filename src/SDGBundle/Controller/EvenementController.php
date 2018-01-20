@@ -17,6 +17,8 @@ class EvenementController extends Controller
     {
         $event = new Evenement();
         $em = $this->getDoctrine()->getManager();
+        $id = $this->getUser()->getId() ;
+        $events=$em->getRepository("SDGBundle:Evenement")->findBy(['idassociation'=>$id]);
 
         $event->setIdassociation($user = $this->getUser());
 
@@ -32,7 +34,15 @@ class EvenementController extends Controller
             return $this->redirectToRoute('sdg_association');
         }
 
-        return $this->render('SDGBundle:Default:evenement.html.twig');
+        return $this->render('SDGBundle:Default:evenement.html.twig',array ("events"=>$events));
+    }
+
+    public function allAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $id = $this->getUser()->getId() ;
+        $events=$em->getRepository("SDGBundle:Evenement")->findBy(['idassociation'=>$id]);
+        return $this->render('SDGBundle:Default:mesEvenements.html.twig',array ("events"=>$events));
     }
 
 }

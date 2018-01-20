@@ -60,7 +60,7 @@ class AfterLoginRedirection implements AuthenticationSuccessHandlerInterface
         if (in_array('ROLE_MEDECIN', $rolesTab, true))
             $redirection = new RedirectResponse($this->router->generate('sdg_medecin'));
         if (in_array('ROLE_ASSOCIATION', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate(''));
+            $redirection = new RedirectResponse($this->router->generate('sdg_association'));
 
 
 

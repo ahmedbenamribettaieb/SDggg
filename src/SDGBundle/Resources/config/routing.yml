@@ -2,18 +2,6 @@ sdg_homepage:
     path:     /
     defaults: { _controller: SDGBundle:Default:index }
 
-sdg_login:
-    path:     /signin
-    defaults: { _controller: SDGBundle:Default:login }
-
-sdg_sgnin:
-    path:     /log
-    defaults: { _controller: SDGBundle:Default:signin }
-
-sdg_register:
-    path:     /signup
-    defaults: { _controller: SDGBundle:Default:register }
-
 sdg_medecin:
     path:     /medecin
     defaults: { _controller: SDGBundle:Default:medecin }
@@ -25,6 +13,12 @@ sdg_association:
 sdg_newevent:
     path:     /newevent
     defaults: { _controller: SDGBundle:Evenement:new }
+
 ajout_article:
     path:     /ajoutarticle
     defaults: { _controller: SDGBundle:Article:ajout }
+
+sdg_allevents:
+    path:     /allevent
+    defaults: { _controller : SDGBundle:Evenement:all }
+
