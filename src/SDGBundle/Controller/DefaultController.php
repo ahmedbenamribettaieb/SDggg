@@ -20,4 +20,14 @@ class DefaultController extends Controller
     {
         return $this->render('SDGBundle:Security:login.html.twig');
     }
+
+    public function registerAction()
+    {
+        return $this->render('SDGBundle:Default:register.html.twig');
+    }
+
+    public function medecinAction()
+    {
+        return $this->render('SDGBundle:Default:espaceMedecin.html.twig');
+    }
 }

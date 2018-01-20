@@ -9,3 +9,11 @@ sdg_login:
 sdg_sgnin:
     path:     /log
     defaults: { _controller: SDGBundle:Default:signin }
+
+sdg_register:
+    path:     /signup
+    defaults: { _controller: SDGBundle:Default:register }
+
+sdg_medecin:
+    path:     /medecin
+    defaults: { _controller: SDGBundle:Default:medecin }
