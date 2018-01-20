@@ -12,13 +12,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 class UserController extends Controller
 {
-    public function indexAction()
+    public function listAction()
     {
         $em = $this->getDoctrine()->getManager();
 
         $users = $em->getRepository('SDGBundle:User')->findAll();
 
-        return $this->render('SDGBundle:users:index.html.twig', array(
+        return $this->render('SDGBundle:Default:listmedecin.html.twig', array(
             'users' => $users,
         ));
     }

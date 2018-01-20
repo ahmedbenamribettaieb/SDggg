@@ -74,10 +74,10 @@
                 <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
             </li>
             <li class="topbar-appertment-btn">
-                <a href= "{{ path('sdg_login') }}">Login</a>
+                <a href="{{ path('sdg_login') }}">Login</a>
             </li>
             <li class="topbar-appertment-btn">
-                <a href= "{{ path('sdg_register') }}">Sign up</a>
+                <a href="{{ path('sdg_register') }}">Sign up</a>
             </li>
         </ul>
     </div>
@@ -100,12 +100,17 @@
                     <ul class="dropdown">
 
 
-                        <li><a href="{{ path ('list_article' ,{'specialite': 'Médecine générale' } ) }}"> Médecine générale </a></li>
-                        <li><a href="{{ path ('list_article' ,{'specialite': 'Dérmatologie' } ) }}"> Dérmatologie </a></li>
-                        <li><a href="{{ path ('list_article' ,{'specialite': 'Endocrinologie' } ) }}"> Endocrinologie</a></li>
-                        <li><a href="{{ path ('list_article' ,{'specialite': 'Gastro-Entérologie' } ) }}"> Gastro-Entérologie</a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Médecine générale' } ) }}"> Médecine
+                                générale </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Dérmatologie' } ) }}"> Dérmatologie </a>
+                        </li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Endocrinologie' } ) }}">
+                                Endocrinologie</a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Gastro-Entérologie' } ) }}">
+                                Gastro-Entérologie</a></li>
                         <li><a href="{{ path ('list_article' ,{'specialite': 'gynécologie' } ) }}">gynécologie </a></li>
-                        <li><a href="{{ path ('list_article' ,{'specialite': 'ophtalmologie' } ) }}">ophtalmologie </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'ophtalmologie' } ) }}">ophtalmologie </a>
+                        </li>
                         <li><a href="{{ path ('list_article' ,{'specialite': 'pédiatrie' } ) }}">pédiatrie </a></li>
 
                     </ul>
@@ -123,41 +128,38 @@
 </header>
 
 
-
 <div class="doctors-section pdt-100 pdb-70">
     <div class="container">
         <div class="row">
-            {% for article in article %}
-            <div class="col-md-4 col-sm-6">
+            {% for users in users %}
+                {% if users.get_the_role() == 'ROLE_MEDECIN' %}
+                    <div class="col-md-4 col-sm-6">
 
-                <div class="doctor-wrapper mb-30">
-                    <div class="doctor-media">
-                        <img src="{{ asset('assets/img/doctors/doctor-img-1.jpg') }}" alt="">
-                        <div class="doctor-time text-center">
-                            <p>Acceder a l'article</p>
+                        <div class="doctor-wrapper mb-30">
+                            <div class="doctor-media">
+
+                                <div class="doctor-time text-center">
+
+                                </div>
+                            </div>
+                            <div class="doctor-body text-center">
+                                <h3 class="doctor-title"><a>{{ users.nom }}</a></h3>
+                                <div class="doctor-content">
+                                    {{ users.specialite }}
+                                    <span>{{ users.numtel }}</span>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="doctor-body text-center">
-                        <h3 class="doctor-title"><a href="{{ path ('detail_article' ,{'id': article.id } ) }}">{{ article.nom }}</a></h3>
-                        <div class="doctor-content">
-                            <span>{{ article.specialite }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
 </div>
 
 
-
-
-
-
-
-
-            {% block content %}
+{% block content %}
 
 {% endblock %}
 <footer class="footer pdt-100">
@@ -168,33 +170,37 @@
                 <div class="col-md-4 mb-30">
                     <div class="widget about-widget">
                         <h3 class="widget-title mb-20">About healthline</h3>
-                        <p>Rapidiously reintermediate seamless customer service via installed base outsourcing. Competently exploit prospective leadership skills via corporate e-services. Assertively synergize resource maximizing relationships vis-a-vis.</p>
+                        <p>Rapidiously reintermediate seamless customer service via installed base outsourcing.
+                            Competently exploit prospective leadership skills via corporate e-services. Assertively
+                            synergize resource maximizing relationships vis-a-vis.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-30">
                     <div class="widget meta-widget">
                         <h3 class="widget-title mb-20">Meet Us</h3>
                         <ul class="list-inline">
-                            <li><a href="appointment.html">Appointment</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                            <li><a href="department.html">Departments</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li><a href="doctors-4-column.html">Doctors</a></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                            <li><a href="stuffs-page.html">Staffs</a></li>
+                            <li><a href="">Appointment</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Departments</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Doctors</a></li>
+                            <li><a href="">FAQs</a></li>
+                            <li><a href="">Staffs</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4 mb-30">
                     <div class="widget newsletter-widget">
                         <h3 class="widget-title">NEWSLETTER SIGNUP</h3>
-                        <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!</p>
+                        <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send
+                            spam!</p>
                         <form class="subscribe-form mailchimp" method="post">
                             <div class="clearfix">
                                 <div class="input-field">
                                     <label class="sr-only" for="email">Email</label>
-                                    <input id="subscribeEmail" type="email" name="subscribeEmail" class="validate form-control newsletter" placeholder="Your Email Please!">
+                                    <input id="subscribeEmail" type="email" name="subscribeEmail"
+                                           class="validate form-control newsletter" placeholder="Your Email Please!">
                                 </div>
                                 <button type="submit"><i class="fa fa-arrow-circle-right"></i></button>
                             </div>
@@ -237,7 +243,8 @@
 
         <div class="footer-bottom">
             <div class="copyright text-center pdt-30 pdb-30">
-                <p>Copyright 2017. All Rights Reserved by <a href="https://trendytheme.net/" target="_blank">Trendytheme</a></p>
+                <p>Copyright 2017. All Rights Reserved by <a href="https://trendytheme.net/"
+                                                             target="_blank">Trendytheme</a></p>
             </div>
         </div>
     </div>

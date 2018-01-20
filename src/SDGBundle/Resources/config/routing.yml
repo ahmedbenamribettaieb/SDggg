@@ -22,3 +22,13 @@ sdg_allevents:
     path:     /allevent
     defaults: { _controller : SDGBundle:Evenement:all }
 
+
+list_article:
+    path:     /listarticle/{specialite}
+    defaults: { _controller: SDGBundle:Article:list }
+detail_article:
+    path:     /detailarticle/{id}
+    defaults: { _controller: SDGBundle:Article:detail }
+list_medecin:
+    path:     /listmedecin
+    defaults: { _controller: SDGBundle:User:list }
