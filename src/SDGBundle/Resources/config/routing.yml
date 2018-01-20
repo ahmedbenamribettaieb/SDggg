@@ -17,3 +17,6 @@ sdg_register:
 sdg_medecin:
     path:     /medecin
     defaults: { _controller: SDGBundle:Default:medecin }
+ajout_article:
+    path:     /ajoutarticle
+    defaults: { _controller: SDGBundle:Article:ajout }
