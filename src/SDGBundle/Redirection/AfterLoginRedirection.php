@@ -57,18 +57,11 @@ class AfterLoginRedirection implements AuthenticationSuccessHandlerInterface
 
 
 
-        if (in_array('ROLE_AGENCE_VOITURE', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate('go_voyage_affichevoitureforAgence'));
-        if (in_array('ROLE_AGENCE', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate('ListVol'));
-        if (in_array('ROLE_HOTEL', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate('hotel_show'));
-        if (in_array('ROLE_ADMIN', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate('Backend_list_vol'));
-        if (in_array('ROLE_GUIDE', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate('AfficherGuideCompte'));
-        if (in_array('ROLE_CLIENT', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate('users_showclient'));
+        if (in_array('ROLE_MEDECIN', $rolesTab, true))
+            $redirection = new RedirectResponse($this->router->generate(''));
+        if (in_array('ROLE_ASSOCIATION', $rolesTab, true))
+            $redirection = new RedirectResponse($this->router->generate(''));
+
 
 
 

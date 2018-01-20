@@ -1,4 +1,4 @@
 services:
-#    sdg.example:
-#        class: SDGBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    redirect.after.login:
+            class: SDGBundle\Redirection\AfterLoginRedirection
+            arguments: ['@router','@security.authorization_checker']

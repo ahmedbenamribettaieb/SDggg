@@ -76,6 +76,10 @@ fos_user:
     from_email:
           address: aaa
           sender_name: aaa
+
+    registration:
+           form:
+               type: SDGBundle\Form\RegistrationType
 vich_uploader:
     db_driver: orm
     mappings:
