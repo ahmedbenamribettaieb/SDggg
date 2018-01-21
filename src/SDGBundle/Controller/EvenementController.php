@@ -11,6 +11,7 @@ use SDGBundle\Entity\Evenement;
 use SDGBundle\Entity\Sos;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\File;
 
 class EvenementController extends Controller
 {

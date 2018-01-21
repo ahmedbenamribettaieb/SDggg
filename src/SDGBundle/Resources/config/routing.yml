@@ -44,3 +44,7 @@ sdg_postsos:
 calcul:
     path:     /calculfrais
     defaults: { _controller: SDGBundle:Default:calcul }
+
+sdg_listsos:
+    path:     /listsos
+    defaults: { _controller: SDGBundle:Evenement:listSOS }
