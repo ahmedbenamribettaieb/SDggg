@@ -3,6 +3,7 @@
 namespace SDGBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -24,20 +25,18 @@ class DefaultController extends Controller
 
     public function calculAction(Request $request)
     {
-
+        $x =0 ;
         if ($request->isMethod('POST')) {
+           if( $request->get('Consultation')  ){
+               return $this->render("SDGBundle:Default:epaceAssociation.html.twig");
+           }
 
-            $request->get('');
-            $request->get('specialite');
-            $request->get('description');
 
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($article);
-            $em->flush();
+
 
         }
-        return $this->render("SDGBundle:Default:ajoutarticle.html.twig");
+        return $this->render("SDGBundle:Default:calcul.html.twig");
     }
 
 

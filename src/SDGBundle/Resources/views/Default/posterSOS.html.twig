@@ -24,7 +24,8 @@
               href="{{ asset('assets/img/ico/apple-touch-icon-114-precomposed.png') }}">
         <link rel="apple-touch-icon-precomposed" sizes="72x72"
               href="{{ asset('assets/img/ico/apple-touch-icon-72-precomposed.png') }}">
-        <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/img/ico/apple-touch-icon-57-precomposed.png') }}">
+        <link rel="apple-touch-icon-precomposed"
+              href="{{ asset('assets/img/ico/apple-touch-icon-57-precomposed.png') }}">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,400,500,600,700|Ubuntu:300,400,500,700"
               rel="stylesheet">
 
@@ -59,9 +60,9 @@
     <div class="topbar">
         <div class="container">
             <ul class="top-bar-cta list-inline">
-                <li > Bienvenue, {{ app.user.username }} </li>
+                <li> Bienvenue, {{ app.user.username }} </li>
 
-                <li class="flaticon-surgeon-1">  </li>
+                <li class="flaticon-surgeon-1"></li>
 
             </ul>
         </div>
@@ -81,8 +82,8 @@
 
                     </li>
 
-                    <li><a href="{{ path('sdg_allevents') }}">Mes évenements</a> </li>
-                    <li><a href="{{ path('sdg_postsos') }}"> Appel de detresse</a> </li>
+                    <li><a href="{{ path('sdg_allevents') }}">Mes évenements</a></li>
+                    <li><a href="{{ path('sdg_postsos') }}"> Appel de detresse</a></li>
 
                 </ul>
             </div>
@@ -97,21 +98,21 @@
                 <div class=" col-md-8 ">
                     <div id="rootwizard" class="tab-wrapper">
                         <div class="featured-item icon-left">
-                        <div class="icon">
-                            <i class="flaticon-ambulance-1"></i>
-                            <h3>Ajouter un SOS </h3>
-                        </div>
+                            <div class="icon">
+                                <i class="flaticon-ambulance-1"></i>
+                                <h3>Ajouter un SOS </h3>
+                            </div>
                         </div>
                         <div class="navbar">
                             <div class="navbar-inner">
 
                             </div>
                         </div>
-                        <div class="tab-content" type="center" >
+                        <div class="tab-content" type="center">
                             <div id="h_tab_one">
                                 <div class="appointment-form-wrapper row">
 
-                                    <form method="POST" >
+                                    <form method="POST">
 
                                         <table>
                                             <tr>
@@ -143,8 +144,6 @@
                                                         {{ form_widget(form.imageFile) }}
                                                     </div>
                                                 </td>
-
-
                                             </tr>
                                             <tr>
                                                 <td class="col-md-6">
@@ -162,51 +161,51 @@
                                 </div>
                             </div>
 
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-4">
-                    <div class="tt-sidebar-wrapper">
-                        <div class="widget widget-social-link mb-50">
-                            <ul class="tt-animate btt list-inline">
-
-                            </ul>
-                        </div>
-                        <div class="widget newsletter-widget mb-50">
-
-                        </div>
-                        <div class="widget widget_tt_popular_post">
-                            <h3 class="widget-title">Mes SOS</h3>
-                            <div class="media">
-                                {% for soss in soss %}
-                                    <div class="media-body">
-
-                                        <h3>
-                                            <a href="#">{{ soss.titre }}</a>
-                                        </h3>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            <h3 class="widget-title">TOUT Les SOS</h3>
-                            <div class="media">
-                                {% for sos in sos %}
-                                    <div class="media-body">
-
-                                        <h3>
-                                            <a href="#">{{ sos.titre }}</a>
-                                        </h3>
-                                    </div>
-                                {% endfor %}
-                            </div>
-
                         </div>
                     </div>
                 </div>
-
 
             </div>
+            <div class="col-md-4">
+                <div class="tt-sidebar-wrapper">
+                    <div class="widget widget-social-link mb-50">
+                        <ul class="tt-animate btt list-inline">
+
+                        </ul>
+                    </div>
+                    <div class="widget newsletter-widget mb-50">
+
+                    </div>
+                    <div class="widget widget_tt_popular_post">
+                        <h3 class="widget-title">Mes SOS</h3>
+                        <div class="media">
+                            {% for soss in soss %}
+                                <div class="media-body">
+
+                                    <h3>
+                                        <a href="#">{{ soss.titre }}</a>
+                                    </h3>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <h3 class="widget-title">TOUT Les SOS</h3>
+                        <div class="media">
+                            {% for sos in sos %}
+                                <div class="media-body">
+
+                                    <h3>
+                                        <a href="#">{{ sos.titre }}</a>
+                                    </h3>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
         </div>
         </div>
     </section>
@@ -219,7 +218,9 @@
                 <div class="col-md-4 mb-30">
                     <div class="widget about-widget">
                         <h3 class="widget-title mb-20">About healthnor</h3>
-                        <p>Rapidiously reintermediate seamless customer service via installed base outsourcing. Competently exploit prospective leadership skills via corporate e-services. Assertively synergize resource maximizing relationships vis-a-vis.</p>
+                        <p>Rapidiously reintermediate seamless customer service via installed base outsourcing.
+                            Competently exploit prospective leadership skills via corporate e-services. Assertively
+                            synergize resource maximizing relationships vis-a-vis.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-30">
@@ -240,12 +241,14 @@
                 <div class="col-md-4 mb-30">
                     <div class="widget newsletter-widget">
                         <h3 class="widget-title">NEWSLETTER SIGNUP</h3>
-                        <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!</p>
+                        <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send
+                            spam!</p>
                         <form class="subscribe-form mailchimp" method="post">
                             <div class="clearfix">
                                 <div class="input-field">
                                     <label class="sr-only" for="email">Email</label>
-                                    <input id="subscribeEmail" type="email" name="subscribeEmail" class="validate form-control newsletter" placeholder="Your Email Please!">
+                                    <input id="subscribeEmail" type="email" name="subscribeEmail"
+                                           class="validate form-control newsletter" placeholder="Your Email Please!">
                                 </div>
                                 <button type="submit"><i class="fa fa-arrow-circle-right"></i></button>
                             </div>
@@ -288,7 +291,8 @@
 
         <div class="footer-bottom">
             <div class="copyright text-center pdt-30 pdb-30">
-                <p>Copyright 2017. All Rights Reserved by <a href="https://trendytheme.net/" target="_blank">Trendytheme</a></p>
+                <p>Copyright 2017. All Rights Reserved by <a href="https://trendytheme.net/"
+                                                             target="_blank">Trendytheme</a></p>
             </div>
         </div>
     </div>
@@ -301,7 +305,7 @@
 
 <script data-cfasync="false"
         src="{{ asset('cdn-cgi/scripts/af2821b0/cloudflare-static/email-decode.min.js') }}"></script>
-<script src="{{asset('assets/js/jquery-2.1.3.min.js')  }}"></script>
+<script src="{{ asset('assets/js/jquery-2.1.3.min.js') }}"></script>
 <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.inview.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.sticky.min.js') }}"></script>
