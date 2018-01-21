@@ -25,18 +25,27 @@ class DefaultController extends Controller
 
     public function calculAction(Request $request)
     {
-        $x =0 ;
+            $y = 0 ;
+            $a=0 ;
+            $b=0;
+
         if ($request->isMethod('POST')) {
-           if( $request->get('Consultation')  ){
-               return $this->render("SDGBundle:Default:epaceAssociation.html.twig");
-           }
+
+            if ($request->get('Consultation')) {
+                $a=1;
+
+                $y = $y + 50;
+
+            }
+            if ($request->get('Echo')) {
+                $b=1;
+                $y = $y + 150;
+            }
 
 
-
-
-
+            return $this->render('SDGBundle:Default:calcul.html.twig',array ("y"=>$y));
         }
-        return $this->render("SDGBundle:Default:calcul.html.twig");
+        return $this->render('SDGBundle:Default:calcul.html.twig',array ("y"=>$y));
     }
 
 

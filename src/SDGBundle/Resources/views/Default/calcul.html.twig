@@ -55,8 +55,89 @@
 {% endblock %}
 <!-- End head -->
 
-<body>
+<div class="topbar">
+    <div class="container">
+        <ul class="top-bar-cta list-inline">
+            <li class="mr-20">
+                <a href="#"><i class="fa fa-phone-square"></i>(+216)96296232</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-envelope-square"></i><span> healthline@gmail.com  </span></a>
+            </li>
+        </ul>
+        <ul class="social-top list-inline text-right">
+            <li>
+                <a href="#" class="facebook"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            </li>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li class="topbar-appertment-btn">
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
 
+                </li>
+            {% else %}
+                <li class="topbar-appertment-btn">
+
+                    <a href="{{ path('fos_user_security_login') }}">Login</a>
+                </li>
+                <li class="topbar-appertment-btn">
+                    <a href="{{ path('fos_user_registration_register') }}">Sign up</a>
+                </li>
+            {% endif %}
+        </ul>
+
+    </div>
+</div>
+<body>
+<header class="main-navigation header-sticky">
+    <div class="container">
+        <div class="menuzord">
+            <a href="{{ path('sdg_homepage') }}" class="menuzord-brand logo-brand">
+                <img src="{{ asset('assets/img/logo-top.png') }}" alt="">
+            </a>
+            <ul class="menu-border menuzord-menu menuzord-right">
+
+                <li><a href="{{ path('sdg_homepage') }}">Acceuil</a>
+
+                </li>
+                <li><a href="javascript:void(0)">Spécialités</a>
+                    <ul class="dropdown">
+
+
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Médecine générale' } ) }}"> Médecine
+                                générale </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Dérmatologie' } ) }}"> Dérmatologie </a>
+                        </li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Endocrinologie' } ) }}">
+                                Endocrinologie</a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'Gastro-Entérologie' } ) }}">
+                                Gastro-Entérologie</a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'gynécologie' } ) }}">gynécologie </a></li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'ophtalmologie' } ) }}">ophtalmologie </a>
+                        </li>
+                        <li><a href="{{ path ('list_article' ,{'specialite': 'pédiatrie' } ) }}">pédiatrie </a></li>
+
+                    </ul>
+                </li>
+                <li><a href="{{ path('list_medecin') }}">Nos Médecins</a>
+
+                </li>
+                <li><a href="{{ path('list_event') }}">Evenements</a>
+
+                </li>
+                <li><a href="{{ path('calcul') }}">Frais de soins</a></li>
+                <li><a href="{{ path('sdg_listsos') }}">Appel de détresse</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 
 <section class="pdt-100 pdb-70 blog-section">
     <div class="container">
@@ -127,8 +208,8 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="col-md-6" >
-                                                <div class="checkbox inline" >
+                                            <td class="col-md-6">
+                                                <div class="checkbox inline">
                                                     <input type="radio" name="Consultation">
                                                     <label>Consultation</label>
                                                 </div>
@@ -170,7 +251,8 @@
                                         <tr>
 
                                             <td class="col-md-6">
-                                                <input type="submit" class="btn btn-primary next " value="calculer">
+                                                <div id="accept-card-option"><h3 class="doctor-title"><a href="#">calculer </a>
+                                                    </h3></div>
                                             </td>
 
 
@@ -194,7 +276,18 @@
     </div>
 
 </section>
-
+<div id="payment-popup-wrapper" class="modal payment-popup-wrapper">
+    <div class="advance-card-option">
+        <span class="close">x</span>
+        <div class="panel panel-default credit-card-box">
+            <div class="panel-body">
+                <div class="row">
+                    {{ y }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="footer pdt-100">
     <div class="container">
 
