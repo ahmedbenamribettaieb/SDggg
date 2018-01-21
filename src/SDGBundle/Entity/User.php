@@ -41,7 +41,7 @@ class User extends BaseUser
 
 
     /**
-     * @ORM\Column(type="integer",nullable=true)
+     * @ORM\Column(type="integer",nullable=true,nullable=true)
      */
     private $numtel;
     /**
@@ -63,7 +63,7 @@ class User extends BaseUser
 
     private $datedecreation;
     /**
-     * @ORM\Column(type="integer",nullable=true)
+     * @ORM\Column(type="integer",nullable=true,nullable=true)
      */
     private $validation;
 

@@ -8,6 +8,7 @@
 
 namespace SDGBundle\Controller;
 use SDGBundle\Entity\Evenement;
+use SDGBundle\Entity\Sos;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -50,6 +51,29 @@ class EvenementController extends Controller
 
         $events=$em->getRepository("SDGBundle:Evenement")->findAll();
         return $this->render('SDGBundle:Default:listevenement.html.twig',array ("events"=>$events));
+    }
+
+    public function newsosAction(Request $request)
+    {
+        $sos = new Sos();
+        $em = $this->getDoctrine()->getManager();
+        $id = $this->getUser()->getId() ;
+        $soss=$em->getRepository("SDGBundle:Sos")->findBy(['idAssociation'=>$id]);
+        $sosss=$em->getRepository("SDGBundle:Sos")->findAll();
+
+        $sos->setIdassociation($user = $this->getUser());
+
+        if ($request->isMethod('POST')) {
+            $sos->setTitre($request->get('titre'));
+            $sos->setDescription($request->get('description'));
+
+            $em->persist($sos);
+            $em->flush($sos);
+
+            return $this->redirectToRoute('sdg_association');
+        }
+
+        return $this->render('SDGBundle:Default:posterSOS.html.twig',array ("soss"=>$soss,"sos"=>$sosss));
     }
 
 }
