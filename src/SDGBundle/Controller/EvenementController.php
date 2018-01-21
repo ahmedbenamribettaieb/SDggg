@@ -44,5 +44,12 @@ class EvenementController extends Controller
         $events=$em->getRepository("SDGBundle:Evenement")->findBy(['idassociation'=>$id]);
         return $this->render('SDGBundle:Default:mesEvenements.html.twig',array ("events"=>$events));
     }
+    public function listAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $events=$em->getRepository("SDGBundle:Evenement")->findAll();
+        return $this->render('SDGBundle:Default:listevenement.html.twig',array ("events"=>$events));
+    }
 
 }
