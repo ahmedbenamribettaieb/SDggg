@@ -29,6 +29,11 @@ list_article:
 detail_article:
     path:     /detailarticle/{id}
     defaults: { _controller: SDGBundle:Article:detail }
+
 list_medecin:
     path:     /listmedecin
     defaults: { _controller: SDGBundle:User:list }
+
+sdg_postsos:
+    path:     /newsos
+    defaults: { _controller: SDGBundle:Evenement:newsos }
