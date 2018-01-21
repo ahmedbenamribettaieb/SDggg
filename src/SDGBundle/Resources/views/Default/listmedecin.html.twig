@@ -74,10 +74,10 @@
                 <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
             </li>
             <li class="topbar-appertment-btn">
-                <a href="{{ path('sdg_login') }}">Login</a>
+                <a href="{{ path('fos_user_security_login') }}">Login</a>
             </li>
             <li class="topbar-appertment-btn">
-                <a href="{{ path('sdg_register') }}">Sign up</a>
+                <a href="{{ path('fos_user_registration_register') }}">Sign up</a>
             </li>
         </ul>
     </div>
@@ -93,7 +93,7 @@
                 <li class="active"><a href="index.html">Qui sommes nous ?</a>
 
                 </li>
-                <li><a href="javascript:void(0)">Acceuil</a>
+                <li><a href="{{ path('list_medecin') }}">Acceuil</a>
 
                 </li>
                 <li><a href="javascript:void(0)">Spécialités</a>
