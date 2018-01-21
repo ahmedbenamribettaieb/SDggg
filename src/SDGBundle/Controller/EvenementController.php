@@ -55,25 +55,29 @@ class EvenementController extends Controller
 
     public function newsosAction(Request $request)
     {
-        $sos = new Sos();
         $em = $this->getDoctrine()->getManager();
-        $id = $this->getUser()->getId() ;
+        $sos= new Sos() ;
+        $sos ->setIdAssociation($user = $this->getUser());
+        $id = $user = $this->getUser()->getId() ;
         $soss=$em->getRepository("SDGBundle:Sos")->findBy(['idAssociation'=>$id]);
         $sosss=$em->getRepository("SDGBundle:Sos")->findAll();
 
-        $sos->setIdassociation($user = $this->getUser());
+        $form = $this->createForm('SDGBundle\Form\SosType', $sos);
+        $form->handleRequest($request);
 
-        if ($request->isMethod('POST')) {
-            $sos->setTitre($request->get('titre'));
-            $sos->setDescription($request->get('description'));
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
 
             $em->persist($sos);
-            $em->flush($sos);
+            $em->flush();
 
-            return $this->redirectToRoute('sdg_association');
+            return $this->redirectToRoute('sdg_postsos');
         }
 
-        return $this->render('SDGBundle:Default:posterSOS.html.twig',array ("soss"=>$soss,"sos"=>$sosss));
+        return $this->render('SDGBundle:Default:posterSOS.html.twig', array(
+            'soss' => $soss,'sos' => $sosss,
+            'form' => $form->createView(),
+        ));
     }
 
     public function listSOSAction()

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +26,7 @@
               href="{{ asset('assets/img/ico/apple-touch-icon-114-precomposed.png') }}">
         <link rel="apple-touch-icon-precomposed" sizes="72x72"
               href="{{ asset('assets/img/ico/apple-touch-icon-72-precomposed.png') }}">
-        <link rel="apple-touch-icon-precomposed"
-              href="{{ asset('assets/img/ico/apple-touch-icon-57-precomposed.png') }}">
+        <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/img/ico/apple-touch-icon-57-precomposed.png') }}">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,400,500,600,700|Ubuntu:300,400,500,700"
               rel="stylesheet">
 
@@ -53,205 +54,208 @@
     </head>
 
 {% endblock %}
-
+<!-- End head -->
 
 <body>
-{% block entete %}
-    <div class="topbar">
-        <div class="container">
-            <ul class="social-top list-inline text-right">
-                <li> Docteur  {{ app.user.username }} </li>
-                <li class="flaticon-surgeon">
-                </li>
-                <li class="topbar-appertment-btn">
-                    <a href="{{ path('fos_user_security_logout') }}">
-                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-                    </a>
-                </li>
-            </ul>
 
+
+
+<section class="pdt-100 pdb-70 blog-section">
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 ">
+                <div id="rootwizard" class="tab-wrapper">
+                    <h3>faire votre calcul </h3>
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <ul class="step">
+                                <li class="step-1">
+                                    <a href="#h_tab_one" data-toggle="tab"></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content" type="center">
+                        <div id="h_tab_one">
+                            <div class="appointment-form-wrapper row">
+
+                                <form method="POST">
+
+                                    <table>
+                                        <tr>
+                                            <td class="col-md-6">
+
+                                                <div class="input-field mb-30">
+                                                    <span class="form-desc">Cliniques</span>
+                                                    <select name="specialite" id="department" class="form-control">
+                                                        <option value="1">Nom</option>
+                                                        <option value="Clinique ibn zohr">Clinique ibn zohr-Tunis
+                                                        </option>
+                                                        <option value="Clinique saint Augustin">Clinique saint Augustin-Menzah</option>
+                                                        <option value="Clinique El Farabi">Clinique El Farabi-Lac2
+                                                        </option>
+                                                        <option value="Gastro-Entérologie">Clinique Rawabi-Bizerte
+                                                        </option>
+                                                        <option value="Clinique Amal-Bizerte">Clinique Amal-Bizerte</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-6">
+
+                                                <div class="input-field mb-30">
+                                                    <span class="form-desc">Specialité*</span>
+                                                    <select name="specialite" id="department" class="form-control">
+                                                        <option value="1">Specialité</option>
+                                                        <option value="Médecine générale">Médecine générale
+                                                        </option>
+                                                        <option value="Dérmatologie">Dérmatologie</option>
+                                                        <option value="outpatient-Endocrinologie">Endocrinologie
+                                                        </option>
+                                                        <option value="Gastro-Entérologie">Gastro-Entérologie
+                                                        </option>
+                                                        <option value="gynécologie">gynécologie</option>
+                                                        <option value="ophtalmologie">ophtalmologie</option>
+                                                        <option value="pédiatrie">pédiatrie</option>
+
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <div class="checkbox inline">
+                                                <input type="checkbox" checked>
+                                                <label>Consultation</label>
+                                            </div>
+
+
+                                        </tr>
+                                        <tr>
+                                            <div class="checkbox inline">
+                                                <input type="checkbox" checked>
+                                                <label>Echo</label>
+                                            </div>
+
+
+                                        </tr>
+                                        <tr>
+                                            <div class="checkbox inline">
+                                                <input type="checkbox" checked>
+                                                <label>IRM</label>
+                                            </div>
+
+
+                                        </tr>
+                                        <tr>
+                                            <div class="checkbox inline">
+                                                <input type="checkbox" checked>
+                                                <label>Scanner</label>
+                                            </div>
+
+
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <div class="checkbox inline">
+                                                <input type="checkbox" checked>
+                                                <label>Scanner</label>
+                                            </div>
+
+
+                                        </tr>
+
+
+
+
+                                        <tr>
+                                            <td class="col-md-6">
+                                                <div class="input-field mb-30">
+                                                    <span class="form-desc">Description</span>
+
+                                                    <textarea name="description" class="form-control "
+                                                    > </textarea>
+                                                </div>
+                                            </td>
+
+
+                                        </tr>
+
+                                        <tr>
+                                            <td class="col-md-6">
+                                                <div class="input-field mb-30">
+                                                    <span class="form-desc">Date de l'évenement</span>
+
+                                                    <input type="date" name="date" class="form-control "> </input>
+                                                </div>
+                                            </td>
+
+
+                                        </tr>
+
+                                        <tr>
+                                            <td class="col-md-6">
+                                                <input type="submit" class="btn btn-primary next " value="poster">
+                                            </td>
+
+
+                                        </tr>
+
+
+                                    </table>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="tt-sidebar-wrapper">
+                <div class="widget widget-social-link mb-50">
+                    <ul class="tt-animate btt list-inline">
+
+                    </ul>
+                </div>
+                <div class="widget newsletter-widget mb-50">
+
+                </div>
+                <div class="widget widget_tt_popular_post">
+                    <h3 class="widget-title">Mes evenements</h3>
+                    <div class="media">
+                        {% for events in events %}
+                            <div class="media-body">
+                                <div class="entry-meta">
+                                    <ul class="list-inline">
+
+                                        <li>{{ events.dateevenement|date('d-m-Y') }}</li>
+                                    </ul>
+                                </div>
+                                <h3>
+                                    <a href="#">{{ events.nom }}</a>
+                                </h3>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
-{% endblock %}
+    </div>
+    </div>
+</section>
 
-{% block toolbar %}
-    <header class="main-navigation header-sticky">
-        <div class="container">
-            <div class="menuzord">
-                <a href="index.html" class="menuzord-brand logo-brand">
-                    <img src="{{ asset('assets/img/logo-top.png') }}" alt="">
-                </a>
-                <ul class="menu-border menuzord-menu menuzord-right">
-
-                    <li><a href="{{ path('sdg_homepage') }}">Acceuil</a>
-
-                    </li>
-                    <li><a href="javascript:void(0)">Spécialités</a>
-                        <ul class="dropdown">
-
-
-                            <li><a href="{{ path ('list_article' ,{'specialite': 'Médecine générale' } ) }}"> Médecine générale </a></li>
-                            <li><a href="{{ path ('list_article' ,{'specialite': 'Dérmatologie' } ) }}"> Dérmatologie </a></li>
-                            <li><a href="{{ path ('list_article' ,{'specialite': 'Endocrinologie' } ) }}"> Endocrinologie</a></li>
-                            <li><a href="{{ path ('list_article' ,{'specialite': 'Gastro-Entérologie' } ) }}"> Gastro-Entérologie</a></li>
-                            <li><a href="{{ path ('list_article' ,{'specialite': 'gynécologie' } ) }}">gynécologie </a></li>
-                            <li><a href="{{ path ('list_article' ,{'specialite': 'ophtalmologie' } ) }}">ophtalmologie </a></li>
-                            <li><a href="{{ path ('list_article' ,{'specialite': 'pédiatrie' } ) }}">pédiatrie </a></li>
-
-                        </ul>
-                    </li>
-                    <li><a href="{{ path('list_medecin') }}">Nos Médecins</a>
-
-                    </li>
-
-                    <li><a href="{{ path('sdg_newevent') }}">Ajouter un évenement</a>
-
-                    </li>
-
-                    <li><a href="{{ path('sdg_allevents') }}">Mes évenements</a></li>
-                    <li><a href="{{ path('sdg_postsos') }}"> Appel de detresse</a> </li>
-
-
-                </ul>
-            </div>
-        </div>
-    </header>
-{% endblock %}
-
-{% block content %}
-    <section class="pdt-100 pdb-70 blog-section">
-        <div class="container">
-            <div class="row">
-                <div class=" col-md-8 ">
-                    <div id="rootwizard" class="tab-wrapper">
-                        <h3>Ajouter un évenement</h3>
-                        <div class="navbar">
-                            <div class="navbar-inner">
-                                <ul class="step">
-                                    <li class="step-1">
-                                        <a href="#h_tab_one" data-toggle="tab">Evenements</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tab-content" type="center">
-                            <div id="h_tab_one">
-                                <div class="appointment-form-wrapper row">
-
-                                    <form method="POST">
-
-                                        <table>
-                                            <tr>
-                                                <td class="col-md-6">
-                                                    <div class="input-field mb-30">
-                                                        <span class="form-desc">Nom de l'évenement*</span>
-                                                        <input type="text" name="nom" class="form-control"
-                                                               required>
-                                                    </div>
-                                                </td>
-
-
-                                            </tr>
-                                            <tr>
-                                                <td class="col-md-6">
-
-                                                    <div class="input-field mb-30">
-                                                        <span class="form-desc">Adresse*</span>
-                                                        <input type="text" name="adresse" class="form-control"
-                                                               required>
-                                                    </div>
-                                                </td>
-
-
-                                            </tr>
-
-
-                                            <tr>
-                                                <td class="col-md-6">
-                                                    <div class="input-field mb-30">
-                                                        <span class="form-desc">Description</span>
-
-                                                        <textarea name="description" class="form-control "
-                                                        > </textarea>
-                                                    </div>
-                                                </td>
-
-
-                                            </tr>
-
-                                            <tr>
-                                                <td class="col-md-6">
-                                                    <div class="input-field mb-30">
-                                                        <span class="form-desc">Date de l'évenement</span>
-
-                                                        <input type="date" name="date" class="form-control "> </input>
-                                                    </div>
-                                                </td>
-
-
-                                            </tr>
-
-                                            <tr>
-                                                <td class="col-md-6">
-                                                    <input type="submit" class="btn btn-primary next " value="poster">
-                                                </td>
-
-
-                                            </tr>
-
-
-                                        </table>
-
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="col-md-4">
-                <div class="tt-sidebar-wrapper">
-                    <div class="widget widget-social-link mb-50">
-                        <ul class="tt-animate btt list-inline">
-
-                        </ul>
-                    </div>
-                    <div class="widget newsletter-widget mb-50">
-
-                    </div>
-                    <div class="widget widget_tt_popular_post">
-                        <h3 class="widget-title">Mes evenements</h3>
-                        <div class="media">
-                            {% for events in events %}
-                                <div class="media-body">
-                                    <div class="entry-meta">
-                                        <ul class="list-inline">
-
-                                            <li>{{ events.dateevenement|date('d-m-Y') }}</li>
-                                        </ul>
-                                    </div>
-                                    <h3>
-                                        <a href="#">{{ events.nom }}</a>
-                                    </h3>
-                                </div>
-                            {% endfor %}
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-    </section>
-
-{% endblock %}
 <footer class="footer pdt-100">
     <div class="container">
 
@@ -259,10 +263,8 @@
             <div class="row">
                 <div class="col-md-4 mb-30">
                     <div class="widget about-widget">
-                        <h3 class="widget-title mb-20">About healthnor</h3>
-                        <p>Rapidiously reintermediate seamless customer service via installed base outsourcing.
-                            Competently exploit prospective leadership skills via corporate e-services. Assertively
-                            synergize resource maximizing relationships vis-a-vis.</p>
+                        <h3 class="widget-title mb-20">About healthline</h3>
+                        <p>Rapidiously reintermediate seamless customer service via installed base outsourcing. Competently exploit prospective leadership skills via corporate e-services. Assertively synergize resource maximizing relationships vis-a-vis.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-30">
@@ -283,14 +285,12 @@
                 <div class="col-md-4 mb-30">
                     <div class="widget newsletter-widget">
                         <h3 class="widget-title">NEWSLETTER SIGNUP</h3>
-                        <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send
-                            spam!</p>
+                        <p>Subscribe to get the latest news, update and offer information. Don't worry, we won't send spam!</p>
                         <form class="subscribe-form mailchimp" method="post">
                             <div class="clearfix">
                                 <div class="input-field">
                                     <label class="sr-only" for="email">Email</label>
-                                    <input id="subscribeEmail" type="email" name="subscribeEmail"
-                                           class="validate form-control newsletter" placeholder="Your Email Please!">
+                                    <input id="subscribeEmail" type="email" name="subscribeEmail" class="validate form-control newsletter" placeholder="Your Email Please!">
                                 </div>
                                 <button type="submit"><i class="fa fa-arrow-circle-right"></i></button>
                             </div>
@@ -333,8 +333,7 @@
 
         <div class="footer-bottom">
             <div class="copyright text-center pdt-30 pdb-30">
-                <p>Copyright 2017. All Rights Reserved by <a href="https://trendytheme.net/"
-                                                             target="_blank">Trendytheme</a></p>
+                <p>Copyright 2017. All Rights Reserved by <a href="https://trendytheme.net/" target="_blank">Trendytheme</a></p>
             </div>
         </div>
     </div>
@@ -436,3 +435,8 @@
         src="{{ asset('assets/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
 <script type="text/javascript"
         src="{{ asset('assets/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+
+
+
+<!-- Mirrored from trendytheme.net/demo/healthnor/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Jan 2018 22:58:56 GMT -->
+

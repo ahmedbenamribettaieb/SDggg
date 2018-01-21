@@ -41,3 +41,6 @@ list_medecin:
 sdg_postsos:
     path:     /newsos
     defaults: { _controller: SDGBundle:Evenement:newsos }
+calcul:
+    path:     /calculfrais
+    defaults: { _controller: SDGBundle:Default:calcul }

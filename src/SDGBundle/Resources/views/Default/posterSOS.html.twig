@@ -137,9 +137,8 @@
                                             <tr>
                                                 <td class="col-md-6">
                                                     <div class="input-field mb-30">
-                                                        <span class="form-desc">Titre de l'appel*</span>
-                                                        <input type="text" name="titre" class="form-control"
-                                                               required>
+                                                        <span class="form-desc">{{ form_label(form.titre) }}</span>
+                                                        {{ form_widget(form.titre) }}
                                                     </div>
                                                 </td>
 
@@ -149,9 +148,19 @@
                                                 <td class="col-md-6">
 
                                                     <div class="input-field mb-30">
-                                                        <span class="form-desc">Description*</span>
-                                                        <input type="text" name="description" class="form-control"
-                                                               required>
+                                                        <span class="form-desc">{{ form_label(form.description) }}</span>
+                                                        {{ form_widget(form.description) }}
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="col-md-6">
+
+                                                    <div class="input-field mb-30">
+                                                        <span class="form-desc">{{ form_label(form.imageFile) }}</span>
+                                                        {{ form_widget(form.imageFile) }}
                                                     </div>
                                                 </td>
 
@@ -178,8 +187,6 @@
                     </div>
 
                 </div>
-
-
                 <div class="col-md-4">
                     <div class="tt-sidebar-wrapper">
                         <div class="widget widget-social-link mb-50">
@@ -217,6 +224,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
         </div>

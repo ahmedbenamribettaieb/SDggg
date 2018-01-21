@@ -81,6 +81,7 @@ fos_user:
            form:
                type: SDGBundle\Form\RegistrationType
 vich_uploader:
+    # ...
     db_driver: orm
     mappings:
         product_images:
