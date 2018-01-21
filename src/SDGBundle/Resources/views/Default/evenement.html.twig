@@ -83,7 +83,7 @@
                     </li>
 
                     <li><a href="{{ path('sdg_allevents') }}">Mes évenements</a></li>
-                    <li><a href="{{ path('sdg_allevents') }}"> Appel de detresse</a> </li>
+                    <li><a href="{{ path('sdg_allevents') }}"> Appel de detresse</a></li>
 
                 </ul>
             </div>
@@ -108,84 +108,84 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="tab-content" type="center" >
+                        <div class="tab-content" type="center">
                             <div id="h_tab_one">
                                 <div class="appointment-form-wrapper row">
 
-                                        <form method="POST" >
+                                    <form method="POST">
 
-                                            <table>
-                                                <tr>
-                                                    <td class="col-md-6">
-                                                        <div class="input-field mb-30">
-                                                            <span class="form-desc">Nom de l'évenement*</span>
-                                                            <input type="text" name="nom" class="form-control"
-                                                                   required>
-                                                        </div>
-                                                    </td>
-
-
-                                                </tr>
-                                                <tr>
-                                                    <td class="col-md-6">
-
-                                                        <div class="input-field mb-30">
-                                                            <span class="form-desc">Adresse*</span>
-                                                            <input type="text" name="adresse" class="form-control"
-                                                                   required>
-                                                        </div>
-                                                    </td>
+                                        <table>
+                                            <tr>
+                                                <td class="col-md-6">
+                                                    <div class="input-field mb-30">
+                                                        <span class="form-desc">Nom de l'évenement*</span>
+                                                        <input type="text" name="nom" class="form-control"
+                                                               required>
+                                                    </div>
+                                                </td>
 
 
-                                                </tr>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-md-6">
+
+                                                    <div class="input-field mb-30">
+                                                        <span class="form-desc">Adresse*</span>
+                                                        <input type="text" name="adresse" class="form-control"
+                                                               required>
+                                                    </div>
+                                                </td>
 
 
-                                                <tr>
-                                                    <td class="col-md-6">
-                                                        <div class="input-field mb-30">
-                                                            <span class="form-desc">Description</span>
-
-                                                            <textarea name="description" class="form-control "
-                                                            > </textarea>
-                                                        </div>
-                                                    </td>
+                                            </tr>
 
 
-                                                </tr>
+                                            <tr>
+                                                <td class="col-md-6">
+                                                    <div class="input-field mb-30">
+                                                        <span class="form-desc">Description</span>
 
-                                                <tr>
-                                                    <td class="col-md-6">
-                                                        <div class="input-field mb-30">
-                                                            <span class="form-desc">Date de l'évenement</span>
-
-                                                            <input type="date" name="date" class="form-control "> </input>
-                                                        </div>
-                                                    </td>
-
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="col-md-6">
-                                                        <input type="submit" class="btn btn-primary next " value="poster">
-                                                    </td>
+                                                        <textarea name="description" class="form-control "
+                                                        > </textarea>
+                                                    </div>
+                                                </td>
 
 
-                                                </tr>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="col-md-6">
+                                                    <div class="input-field mb-30">
+                                                        <span class="form-desc">Date de l'évenement</span>
+
+                                                        <input type="date" name="date" class="form-control "> </input>
+                                                    </div>
+                                                </td>
 
 
-                                            </table>
+                                            </tr>
 
-                                        </form>
+                                            <tr>
+                                                <td class="col-md-6">
+                                                    <input type="submit" class="btn btn-primary next " value="poster">
+                                                </td>
+
+
+                                            </tr>
+
+
+                                        </table>
+
                                     </form>
+
                                 </div>
                             </div>
-
-
                         </div>
-                    </div>
 
+                    </div>
                 </div>
+
+            </div>
 
 
             <div class="col-md-4">
@@ -202,24 +202,24 @@
                         <h3 class="widget-title">Mes evenements</h3>
                         <div class="media">
                             {% for events in events %}
-                            <div class="media-body">
-                                <div class="entry-meta">
-                                    <ul class="list-inline">
+                                <div class="media-body">
+                                    <div class="entry-meta">
+                                        <ul class="list-inline">
 
-                                        <li>{{ events.dateevenement|date('d-m-Y') }}</li>
-                                    </ul>
+                                            <li>{{ events.dateevenement|date('d-m-Y') }}</li>
+                                        </ul>
+                                    </div>
+                                    <h3>
+                                        <a href="#">{{ events.nom }}</a>
+                                    </h3>
                                 </div>
-                                <h3>
-                                    <a href="#">{{ events.nom }}</a>
-                                </h3>
-                            </div>
                             {% endfor %}
                         </div>
 
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         </div>
     </section>
