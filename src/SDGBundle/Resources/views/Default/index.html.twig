@@ -76,13 +76,24 @@
             <li>
                 <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
             </li>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
             <li class="topbar-appertment-btn">
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+
+            </li>
+            {% else %}
+            <li class="topbar-appertment-btn">
+
                 <a href= "{{ path('fos_user_security_login') }}">Login</a>
             </li>
             <li class="topbar-appertment-btn">
                 <a href= "{{ path('fos_user_registration_register') }}">Sign up</a>
             </li>
-        </ul>
+            {% endif %}
+
+
     </div>
 </div>
 
@@ -93,9 +104,7 @@
                 <img src="{{ asset('assets/img/logo-top.png') }}" alt="">
             </a>
             <ul class="menu-border menuzord-menu menuzord-right">
-                <li class="active"><a href="{{ path('sdg_homepage') }}">Qui sommes nous ?</a>
 
-                </li>
                 <li><a href="{{ path('sdg_homepage') }}">Acceuil</a>
 
                 </li>

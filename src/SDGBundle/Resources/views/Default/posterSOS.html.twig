@@ -77,6 +77,26 @@
                     <img src="{{ asset('assets/img/logo-top.png') }}" alt="">
                 </a>
                 <ul class="menu-border menuzord-menu menuzord-right">
+                    <li><a href="{{ path('sdg_homepage') }}">Acceuil</a>
+
+                    </li>
+                    <li><a href="javascript:void(0)">Spécialités</a>
+                        <ul class="dropdown">
+
+
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'Médecine générale' } ) }}"> Médecine générale </a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'Dérmatologie' } ) }}"> Dérmatologie </a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'Endocrinologie' } ) }}"> Endocrinologie</a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'Gastro-Entérologie' } ) }}"> Gastro-Entérologie</a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'gynécologie' } ) }}">gynécologie </a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'ophtalmologie' } ) }}">ophtalmologie </a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'pédiatrie' } ) }}">pédiatrie </a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="{{ path('list_medecin') }}">Nos Médecins</a>
+
+                    </li>
 
                     <li><a href="{{ path('sdg_newevent') }}">Ajouter un évenement</a>
 

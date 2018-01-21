@@ -67,21 +67,23 @@
             </li>
         </ul>
         <ul class="social-top list-inline text-right">
-            <li>
-                <a href="#" class="facebook"><i class="fa fa-facebook-square"></i></a>
-            </li>
-            <li>
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-            </li>
-            <li class="topbar-appertment-btn">
-                <a href= "{{ path('fos_user_security_login') }}">Login</a>
-            </li>
-            <li class="topbar-appertment-btn">
-                <a href= "{{ path('fos_user_registration_register') }}">Sign up</a>
-            </li>
+
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li class="topbar-appertment-btn">
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+
+                </li>
+            {% else %}
+                <li class="topbar-appertment-btn">
+
+                    <a href= "{{ path('fos_user_security_login') }}">Login</a>
+                </li>
+                <li class="topbar-appertment-btn">
+                    <a href= "{{ path('fos_user_registration_register') }}">Sign up</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </div>
@@ -93,9 +95,7 @@
                 <img src="{{ asset('assets/img/logo-top.png') }}" alt="">
             </a>
             <ul class="menu-border menuzord-menu menuzord-right">
-                <li class="active"><a href="{{ path('sdg_homepage') }}">Qui sommes nous ?</a>
 
-                </li>
                 <li><a href="{{ path('sdg_homepage') }}">Acceuil</a>
 
                 </li>
@@ -119,249 +119,87 @@
                 <li><a href="{{ path('list_event') }}">Evenements</a>
 
                 </li>
+                <li><a href="{{ path('list_event') }}">Appel de detresse</a> </li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
 </header>
 
-<section class="rev_slider_wrapper">
-    <div class="rev_slider healthnor-slider">
-        <ul>
-
-            <li data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut"
-                data-easeout="Power4.easeInOut" data-masterspeed="2000"
-                data-thumb="{{ asset('assets/img/slider-img/hero-1.jpg') }}" data-rotate="0" data-fstransition="fade"
-                data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off" data-title="Matrox Material"
-                data-description="">
-
-                <img src="{{ asset('assets/img/slider-img/hero-1.jpg') }}" alt="" data-bgposition="center center"
-                     data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg"
-                     data-no-retina>
-
-                <div class="tp-caption rev-heading tp-resizeme" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="['center','center','center','center']"
-                     data-voffset="['-150', '-150', '-170', '-170']" data-fontsize="['56','56','56','40']"
-                     data-lineheight="['60','60','60','50']" data-width="none" data-height="none"
-                     data-whitespace="nowrap" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="800" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 5; white-space: nowrap; font-family: 'Ubuntu'; font-weight: 700">Vous êtes un
-                    Docteur </br>
-                    ou une Association ? </br>
-                </div>
-
-                <div class="tp-caption rev-heading tp-resizeme" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="center" data-voffset="['-75', '-75', '-110', '-120']"
-                     data-fontsize="['56','56','56','40']" data-lineheight="['60','60','60','50']" data-width="none"
-                     data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="800" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 5; white-space: nowrap; font-family: 'Ubuntu'; font-weight: 700; color:#00baff">
-                    Rejoignez-Nous!
-                </div>
-
-                <div class="tp-caption tp-resizeme rev-subheading" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="center" data-voffset="['0', '0', '-20', '-30']"
-                     data-fontsize="['16','16','20','18']" data-width="['600','600','500','400']"
-                     data-whitespace="normal" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: normal;">
-                </div>
-
-                <div class="tp-caption tp-resizeme rev-btn" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120','0','0']" data-y="['middle','middle','middle','middle']"
-                     data-voffset="['90','90','90','80']" data-width="none" data-height="none" data-whitespace="nowrap"
-                     data-transform_idle="o:1;" data-style_hover="cursor:default;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1200" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 7; white-space: nowrap; padding: 2px 20px; text-transform: uppercase; letter-spacing: 1px; font-family:'Ubuntu'; font-size: 15px; background:#00baff; border-radius: 3px;">
-                    <a href="appointment.html">Sign up</a>
-                </div>
-            </li>
 
 
-            <li data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut"
-                data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="assets/img/slider-img/hero-3.jpg"
-                data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7"
-                data-saveperformance="off" data-title="Matrox Material" data-description="">
-
-                <img src="{{ asset('assets/img/slider-img/hero-3.jpg') }}" alt="" data-bgposition="center center"
-                     data-bgfit="cover"
-                     data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-
-                <div class="tp-caption rev-heading tp-resizeme" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="center"
-                     data-voffset="['-150', '-150', '-170', '-170']" data-fontsize="['56','56','56','40']"
-                     data-lineheight="['60','60','60','50']" data-width="none" data-height="none"
-                     data-whitespace="nowrap" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="800" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 5; white-space: nowrap; font-family: 'Ubuntu'; font-weight: 700"> Savoir plus a propos votre
-
-                </div>
-
-                <div class="tp-caption rev-heading tp-resizeme" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="center" data-voffset="['-75', '-75', '-110', '-120']"
-                     data-fontsize="['56','56','56','40']" data-lineheight="['60','60','60','50']" data-width="none"
-                     data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="800" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 5; white-space: nowrap; font-family: 'Ubuntu'; font-weight: 700">A <span
-                            style="color:#00baff">Santé</span>
-                </div>
-
-                <div class="tp-caption tp-resizeme rev-subheading" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="center" data-voffset="['0', '0', '-20', '-30']"
-                     data-fontsize="['16','16','20','18']" data-width="['600','600','500','400']"
-                     data-whitespace="normal" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: normal;">.
-                </div>
-
-                <div class="tp-caption tp-resizeme rev-btn" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="['middle','middle','middle','middle']"
-                     data-voffset="['90','90','90','80']" data-width="none" data-height="none" data-whitespace="nowrap"
-                     data-transform_idle="o:1;" data-style_hover="cursor:default;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1200" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 7; white-space: nowrap; padding: 2px 20px; text-transform: uppercase; letter-spacing: 1px; font-family:'Ubuntu'; font-size: 15px; background:#00baff; border-radius: 3px;">
-                    <a href="appointment.html">Consultez nos articles </a>
-                </div>
-            </li>
-
-
-            <li data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut"
-                data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="assets/img/slider-img/hero-4.jpg"
-                data-rotate="0" data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7"
-                data-saveperformance="off" data-title="Matrox Material" data-description="">
-
-                <img src="{{ asset('assets/img/slider-img/hero-4.jpg') }}" alt="" data-bgposition="center center"
-                     data-bgfit="cover"
-                     data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-
-                <div class="tp-caption rev-heading tp-resizeme" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="center"
-                     data-voffset="['-150', '-150', '-170', '-170']" data-fontsize="['56','56','56','40']"
-                     data-lineheight="['60','60','60','50']" data-width="none" data-height="none"
-                     data-whitespace="nowrap" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="800" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 5; white-space: nowrap; font-family: 'Ubuntu'; font-weight: 700">Vous avez besoin
-                </div>
-
-                <div class="tp-caption rev-heading tp-resizeme" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="center" data-voffset="['-75', '-75', '-110', '-120']"
-                     data-fontsize="['56','56','56','40']" data-lineheight="['60','60','60','50']" data-width="none"
-                     data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="800" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 5; white-space: nowrap; font-family: 'Ubuntu'; font-weight: 700"><span
-                            style="z-index: 5; white-space: nowrap; font-family: 'Ubuntu'; font-weight: 700">d'un medecin ?</span>
-                </div>
-
-                <div class="tp-caption tp-resizeme rev-subheading" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="center" data-voffset="['0', '0', '-20', '-30']"
-                     data-fontsize="['16','16','20','18']" data-width="['600','600','500','400']"
-                     data-whitespace="normal" data-transform_idle="o:1;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: normal;">
-                </div>
-
-                <div class="tp-caption tp-resizeme rev-btn" data-x="['left','left','center','center']"
-                     data-hoffset="['50','120', '0', '0']" data-y="['middle','middle','middle','middle']"
-                     data-voffset="['90','90','90','80']" data-width="none" data-height="none" data-whitespace="nowrap"
-                     data-transform_idle="o:1;" data-style_hover="cursor:default;"
-                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:600;e:Power4.easeInOut;"
-                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
-                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1200" data-splitin="none"
-                     data-splitout="none" data-responsive_offset="on"
-                     style="z-index: 7; white-space: nowrap; padding: 2px 20px; text-transform: uppercase; letter-spacing: 1px; font-family:'Ubuntu'; font-size: 15px; background:#00baff; border-radius: 3px;">
-                    <a href="appointment.html">Choisissez un de nos Medecins</a>
-                </div>
-            </li>
-
-        </ul>
-    </div>
-</section>
-
-<section class="professionalism-section pdt-100 pdb-70">
+<div class="doctors-section pdt-100 pdb-70">
     <div class="container">
-        <div class="section-wapper text-center">
-            <h2 class="section-title">Nous croyons au professionnalisme</h2>
-        </div>
         <div class="row">
-            <div class="col-md-4 col-sm-6 mb-40">
-                <div class="featured-item icon-left">
-                    <div class="icon">
-                        <i class="flaticon-surgeon"></i>
+            {% for sos in sos %}
+            <div class="col-md-4 col-sm-6">
+                <div class="doctor-wrapper mb-30">
+                    <div class="doctor-media">
+
+                        <img src="{{ asset('') }}{{ sos.imageFile }}" alt="">
+                        <div class="doctor-time text-center">
+                            <p>{{ sos.titre }}</p>
+                        </div>
                     </div>
-                    <div class="des">
-                        <h3 class="des-title">
-                            Les meilleurs médecins</h3>
-                        <p> Des médecins confirmés par l'état sont a votre disposition pour toutes questions </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-40">
-                <div class="featured-item icon-left">
-                    <div class="icon">
-                        <i class="flaticon-medical-3"></i>
-                    </div>
-                    <div class="des">
-                        <h3 class="des-title">  articless de santés  </h3>
-                        <p>A travers des Articles vérifiés, vos questions deviendrons des réponses </p>
+                    <div class="doctor-body text-center">
+                        <div id="accept-card-option">  <h3 class="doctor-title" ><a href="#">Voir plus de details </a> </h3> </div>
+                        <div class="doctor-content">
+                            <span> et Aidez ! </span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 mb-40">
-                <div class="featured-item icon-left">
-                    <div class="icon">
-                        <i class="flaticon-man"></i>
+           {% endfor %}
+                </div>
+            </div>
+        </div>
+<div id="payment-popup-wrapper" class="modal payment-popup-wrapper">
+    <div class="advance-card-option">
+        <span class="close">x</span>
+        <div class="accept-card-wrapper">
+            <span>Help them live a better life </span>
+            <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
+                <div class="col-sm-12">
+                    <div class="form-group payment-card-number">
+                        <div class="form-group">
+                            <span for="cardNumber" class="form-desc">Numero de carte</span>
+                            <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+                        </div>
                     </div>
-                    <div class="des">
-                        <h3 class="des-title">Etre a Jour</h3>
-                        <p>A travers les associations et leurs évenements, vous serez a jour</p>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group ">
+                        <div class="form-group">
+                            <span for="cardNumber" class="form-desc"> Montant </span>
+                            <input type="tel" class="form-control" name="cardNumber" placeholder="" autocomplete="cc-number" required autofocus />
+                        </div>
                     </div>
+                </div>
+            <ul class="list-inline">
+                <li>
+                    <a href="#"><img src="{{ asset('assets/img/card-img/card-img-1.png')}}" alt=""></a>
+                </li>
+
+                <li>
+                    <a href="#"><img src="{{ asset('assets/img/card-img/card-img-3.png')}}" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="{{ asset('assets/img/card-img/card-img-4.png')}}" alt=""></a>
+                </li>
+
+            </ul>
+            <ul class="social-top list-inline text-right">
+                <li class="topbar-appertment-btn">  <a href="#"> Faites un don! </a></li></ul>
+
+
+        <div class="panel panel-default credit-card-box">
+            <div class="panel-body">
+                <div class="row">
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <footer class="footer pdt-100">
     <div class="container">
