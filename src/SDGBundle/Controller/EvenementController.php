@@ -76,4 +76,12 @@ class EvenementController extends Controller
         return $this->render('SDGBundle:Default:posterSOS.html.twig',array ("soss"=>$soss,"sos"=>$sosss));
     }
 
+    public function listSOSAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $sos=$em->getRepository("SDGBundle:Sos")->findAll();
+        return $this->render('SDGBundle:Default:listSos.html.twig',array ("sos"=>$sos));
+    }
+
 }

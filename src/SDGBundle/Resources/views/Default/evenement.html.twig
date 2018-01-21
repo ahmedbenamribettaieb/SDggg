@@ -59,12 +59,17 @@
 {% block entete %}
     <div class="topbar">
         <div class="container">
-            <ul class="top-bar-cta list-inline">
-                <li> Bienvenue, {{ app.user.username }} </li>
-
-                <li class="flaticon-surgeon-1"></li>
-
+            <ul class="social-top list-inline text-right">
+                <li> Docteur  {{ app.user.username }} </li>
+                <li class="flaticon-surgeon">
+                </li>
+                <li class="topbar-appertment-btn">
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                </li>
             </ul>
+
         </div>
     </div>
 {% endblock %}
@@ -78,12 +83,34 @@
                 </a>
                 <ul class="menu-border menuzord-menu menuzord-right">
 
+                    <li><a href="{{ path('sdg_homepage') }}">Acceuil</a>
+
+                    </li>
+                    <li><a href="javascript:void(0)">Spécialités</a>
+                        <ul class="dropdown">
+
+
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'Médecine générale' } ) }}"> Médecine générale </a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'Dérmatologie' } ) }}"> Dérmatologie </a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'Endocrinologie' } ) }}"> Endocrinologie</a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'Gastro-Entérologie' } ) }}"> Gastro-Entérologie</a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'gynécologie' } ) }}">gynécologie </a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'ophtalmologie' } ) }}">ophtalmologie </a></li>
+                            <li><a href="{{ path ('list_article' ,{'specialite': 'pédiatrie' } ) }}">pédiatrie </a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="{{ path('list_medecin') }}">Nos Médecins</a>
+
+                    </li>
+
                     <li><a href="{{ path('sdg_newevent') }}">Ajouter un évenement</a>
 
                     </li>
 
                     <li><a href="{{ path('sdg_allevents') }}">Mes évenements</a></li>
-                    <li><a href="{{ path('sdg_allevents') }}"> Appel de detresse</a> </li>
+                    <li><a href="{{ path('sdg_postsos') }}"> Appel de detresse</a> </li>
+
 
                 </ul>
             </div>

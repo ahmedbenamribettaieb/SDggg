@@ -67,21 +67,23 @@
             </li>
         </ul>
         <ul class="social-top list-inline text-right">
-            <li>
-                <a href="#" class="facebook"><i class="fa fa-facebook-square"></i></a>
-            </li>
-            <li>
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-                <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-            </li>
-            <li class="topbar-appertment-btn">
-                <a href= "{{ path('fos_user_security_login') }}">Login</a>
-            </li>
-            <li class="topbar-appertment-btn">
-                <a href= "{{ path('fos_user_registration_register') }}">Sign up</a>
-            </li>
+
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li class="topbar-appertment-btn">
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+
+                </li>
+            {% else %}
+                <li class="topbar-appertment-btn">
+
+                    <a href= "{{ path('fos_user_security_login') }}">Login</a>
+                </li>
+                <li class="topbar-appertment-btn">
+                    <a href= "{{ path('fos_user_registration_register') }}">Sign up</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </div>
@@ -93,9 +95,7 @@
                 <img src="{{ asset('assets/img/logo-top.png') }}" alt="">
             </a>
             <ul class="menu-border menuzord-menu menuzord-right">
-                <li class="active"><a href="{{ path('sdg_homepage') }}">Qui sommes nous ?</a>
 
-                </li>
                 <li><a href="{{ path('sdg_homepage') }}">Acceuil</a>
 
                 </li>
@@ -119,6 +119,7 @@
                 <li><a href="{{ path('list_event') }}">Evenements</a>
 
                 </li>
+                <li><a href="{{ path('list_event') }}">Appel de detresse</a> </li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -319,49 +320,33 @@
     </div>
 </section>
 
-<section class="professionalism-section pdt-100 pdb-70">
+<div class="doctors-section pdt-100 pdb-70">
     <div class="container">
-        <div class="section-wapper text-center">
-            <h2 class="section-title">Nous croyons au professionnalisme</h2>
-        </div>
         <div class="row">
-            <div class="col-md-4 col-sm-6 mb-40">
-                <div class="featured-item icon-left">
-                    <div class="icon">
-                        <i class="flaticon-surgeon"></i>
+            {% for sos in sos %}
+            <div class="col-md-4 col-sm-6">
+                <div class="doctor-wrapper mb-30">
+                    <div class="doctor-media">
+
+                        <img src="{{ asset('') }}{{ sos.imageFile }}" alt="">
+                        <div class="doctor-time text-center">
+                            <p>MON TO WED 3.30-5:30</p>
+                        </div>
                     </div>
-                    <div class="des">
-                        <h3 class="des-title">
-                            Les meilleurs médecins</h3>
-                        <p> Des médecins confirmés par l'état sont a votre disposition pour toutes questions </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-40">
-                <div class="featured-item icon-left">
-                    <div class="icon">
-                        <i class="flaticon-medical-3"></i>
-                    </div>
-                    <div class="des">
-                        <h3 class="des-title">  articless de santés  </h3>
-                        <p>A travers des Articles vérifiés, vos questions deviendrons des réponses </p>
+                    <div class="doctor-body text-center">
+                        <h3 class="doctor-title"><a href="doctor-justin.html">Dr. Justin Smith</a></h3>
+                        <div class="doctor-content">
+                            <span>Cardiology</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 mb-40">
-                <div class="featured-item icon-left">
-                    <div class="icon">
-                        <i class="flaticon-man"></i>
-                    </div>
-                    <div class="des">
-                        <h3 class="des-title">Etre a Jour</h3>
-                        <p>A travers les associations et leurs évenements, vous serez a jour</p>
-                    </div>
+           {% endfor %}
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 <footer class="footer pdt-100">
     <div class="container">
